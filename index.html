@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>yennhi</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;family=Bangers&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "christmas-red": "#E63946",
+              "christmas-green": "#2A9D8F",
+              "christmas-dark-green": "#264653",
+              "christmas-gold": "#E9C46A",
+              paper: "#FFF1E6",
+              ink: "#1D1D1D",
+              primary: "#607AFB",
+              "background-light": "#f5f6f8",
+              "background-dark": "#0f1323",
+            },
+            fontFamily: {
+              comic: ["Bangers", "cursive"],
+              display: "Plus Jakarta Sans",
+            },
+            boxShadow: {
+              comic: "5px 5px 0px 0px #1D1D1D",
+              "comic-sm": "3px 3px 0px 0px #1D1D1D",
+              "comic-hover": "2px 2px 0px 0px #1D1D1D",
+            },
+            backgroundImage: {
+              "snow-pattern":
+                "radial-gradient(#CBD5E1 1.5px, transparent 1.5px), radial-gradient(#CBD5E1 1.5px, transparent 1.5px)",
+            },
+            backgroundSize: { "snow-size": "20px 20px" },
+            borderRadius: {
+              DEFAULT: "1rem",
+              lg: "2rem",
+              xl: "3rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #fff1e6;
+        border-left: 2px solid #1d1d1d;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #e63946;
+        border: 2px solid #1d1d1d;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #d62828;
+      }
+      .comic-panel {
+        background-color: white;
+        border: 3px solid #1d1d1d;
+        box-shadow: 6px 6px 0px #1d1d1d;
+        transition: transform 0.1s;
+      }
+      .comic-panel:hover {
+        transform: translate(-2px, -2px);
+        box-shadow: 8px 8px 0px #1d1d1d;
+      }
+      .snow-bg {
+        background-color: #f8f9fa;
+        background-image: radial-gradient(#dbeafe 2px, transparent 2px),
+          radial-gradient(#dbeafe 2px, transparent 2px);
+        background-size: 30px 30px;
+        background-position: 0 0, 15px 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
