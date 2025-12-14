@@ -1,4 +1,4 @@
-import Header from "../Layout/header";
+import Header from "../Layout/Header";
 import Footer from "../Layout/Footer";
 import Content1 from "./Content1";
 import Content2 from "./Content2";
