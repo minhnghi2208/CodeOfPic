@@ -1,4 +1,8 @@
+import { useNavigate } from "react-router-dom";
+
 const Header = () => {
+  const navigate = useNavigate();
+  const goToLink = (link) => navigate(link);
   return (
     <div class="w-full bg-white border-b-4 border-ink sticky top-0 z-50">
       <div class="layout-container flex justify-center w-full">
@@ -17,11 +21,15 @@ const Header = () => {
                 <a
                   class="text-sm font-bold uppercase hover:text-christmas-red hover:underline decoration-2 underline-offset-4 transition-all"
                   href="#"
+                  onClick={() => goToLink("/")}
                 >
                   Trang chủ
                 </a>
               </nav>
-              <button class="flex items-center justify-center rounded-lg h-10 px-6 bg-christmas-red text-white text-sm font-bold border-2 border-ink shadow-comic hover:shadow-comic-hover hover:translate-y-[2px] hover:translate-x-[2px] transition-all">
+              <button
+                onClick={() => goToLink("/memories")}
+                class="flex items-center justify-center rounded-lg h-10 px-6 bg-christmas-red text-white text-sm font-bold border-2 border-ink shadow-comic hover:shadow-comic-hover hover:translate-y-[2px] hover:translate-x-[2px] transition-all"
+              >
                 <span>Hành trình</span>
               </button>
             </div>
