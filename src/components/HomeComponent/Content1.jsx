@@ -76,7 +76,7 @@ const Content1 = () => {
                     </span>
                   </div>
                   <h1 class="text-5xl md:text-6xl lg:text-7xl font-comic text-ink leading-[0.9]">
-                    MERRY <span class="text-christmas-red">CHRISMAST</span>
+                    MERRY <span class="text-christmas-red">CHRISTMAS</span>
                     <br />
                     <span class="text-christmas-green">NHI!</span>
                   </h1>
