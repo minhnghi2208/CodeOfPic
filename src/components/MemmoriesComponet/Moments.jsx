@@ -8,7 +8,10 @@ import moki2 from "../../assets/momentsPic/moki2.jpg";
 import hichine from "../../assets/momentsPic/hichine.jpg";
 import hoixuan from "../../assets/momentsPic/hoixuan.jpg";
 import bun from "../../assets/pic/bun.jpg";
+import { useNavigate } from "react-router-dom";
 const Moments = () => {
+  const navigate = useNavigate();
+  const goToLink = (link) => navigate(link);
   return (
     <>
       <div class="w-full max-w-[1400px] px-4 md:px-10 pb-8 pt-5">
@@ -268,11 +271,20 @@ const Moments = () => {
             </div>
           </div>
         </div>
-        {/* <div class="flex justify-end mt-2">
-          <p class="font-comic text-sm text-gray-500 italic">
+        <div class="flex justify-end mt-2">
+          {/* <button class="font-comic text-sm text-gray-500 italic">
             Còn tiếp ở trang sau...
-          </p>
-        </div> */}
+          </button> */}
+          <button
+            onClick={() => goToLink("/lastMail")}
+            class="pt-5 group flex items-center gap-2 text-primary hover:text-primary-dark font-bold text-lg transition-colors"
+          >
+            Đến lá thư cuối cùng
+            <span class="material-symbols-outlined text-2xl transition-transform group-hover:translate-x-1 group-hover:scale-110">
+              arrow_right_alt
+            </span>
+          </button>
+        </div>
       </div>
     </>
   );
