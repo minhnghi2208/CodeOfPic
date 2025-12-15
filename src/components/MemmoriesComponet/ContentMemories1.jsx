@@ -1,6 +1,17 @@
-import pic1 from "../../assets/pic/pic1.jpg";
-
+// import pic1 from "../../assets/pic/pic1.jpg";
+import { useState } from "react";
+import { MyStory } from "../../assets/data/memoriesData";
 const ContentMemories1 = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const currentStory = MyStory[currentIndex];
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev === MyStory.length - 1 ? 0 : prev + 1));
+  };
+  const handlePrev = () => {
+    setCurrentIndex((prev) => (prev === 0 ? MyStory.length - 1 : prev - 1));
+  };
+
   return (
     <>
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 min-h-[600px]">
@@ -111,53 +122,54 @@ const ContentMemories1 = () => {
                     <div
                       class="absolute inset-0 bg-cover bg-center"
                       style={{
-                        backgroundImage: `url(${pic1})`,
+                        backgroundImage: `url(${currentStory.picture})`,
                       }}
                     ></div>
                   </div>
                   <div class="absolute bottom-3 left-0 w-full text-center">
                     <span class="font-comic text-xl text-ink font-bold">
-                      Kỷ niệm Đà Lạt ❤️
+                      {currentStory.pictureTitle}
                     </span>
+                    {/* pictureTitle */}
                   </div>
+
                   <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-24 h-8 bg-yellow-100/80 border border-yellow-200 rotate-1 shadow-sm backdrop-blur-sm"></div>
                 </div>
                 <div class="absolute bottom-6 left-8 rotate-6 animate-pulse">
                   <div class="border-2 border-primary text-primary rounded-full px-4 py-1 font-bold text-lg uppercase tracking-widest border-dashed opacity-80 mix-blend-multiply">
-                    2018 - DEC 25
+                    {currentStory.date}
                   </div>
+                  {/* date */}
                 </div>
               </div>
               <div class="w-full md:w-1/2 p-8 md:p-10 flex flex-col relative z-10">
                 <div class="relative self-start mb-6">
                   <div class="bg-primary text-white border-2 border-ink px-4 py-1 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] relative z-10 transform -rotate-1">
                     <h3 class="text-2xl font-bold uppercase tracking-wide">
-                      Chuyến đi đầu tiên
+                      {currentStory.title}
                     </h3>
+                    {/* title */}
                   </div>
                   <div class="absolute top-0 left-0 w-full h-full bg-black translate-x-1 translate-y-1 -z-0"></div>
                 </div>
                 <div class="flex-1 prose prose-xl text-ink font-comic leading-relaxed">
                   <p class="mb-4 first-letter:text-4xl first-letter:text-primary first-letter:font-bold first-letter:mr-1">
-                    Nhớ không em, cái lạnh đầu đông ở Đà Lạt năm ấy? Đó là lần
-                    đầu tiên hai đứa mình cùng nhau đi xa đến thế.
+                    {currentStory.message1}
                   </p>
+                  {/* message1 */}
                   <p class="mb-4">
-                    Anh vẫn nhớ như in nụ cười của em khi nhìn thấy đồi chè Cầu
-                    Đất trong sương sớm.
-                    <span class="inline-block px-1 bg-yellow-200 transform -rotate-1">
-                      Em bảo rằng muốn thời gian ngừng lại
-                    </span>
-                    ở khoảnh khắc đó mãi mãi.
+                    {currentStory.message2}
+                    {/* <span class="inline-block px-1 bg-yellow-200 transform -rotate-1"> */}
+                    {/* </span> */}
                   </p>
+                  {/* message2 */}
                   <div class="speech-bubble bg-blue-50 border-blue-900 text-blue-900 text-lg mb-2 mx-4">
-                    "Bức ảnh này anh chụp lén lúc em đang mải mê ngắm hoa dã
-                    quỳ!"
+                    "{currentStory.conclusion}"{/* conclusion */}
                     <div class="absolute -bottom-[10px] left-6 w-0 h-0 border-l-[10px] border-l-transparent border-t-[10px] border-t-ink border-r-[10px] border-r-transparent"></div>
                     <div class="absolute -bottom-[6px] left-[26px] w-0 h-0 border-l-[8px] border-l-transparent border-t-[8px] border-t-white border-r-[8px] border-r-transparent"></div>
                   </div>
                   <p class="text-right text-gray-500 text-lg mt-2 font-bold">
-                    - Ký tên: Anh -
+                    - - Khle - -
                   </p>
                 </div>
                 <div class="mt-8 pt-6 border-t-2 border-dashed border-gray-300 flex items-center justify-between">
@@ -193,7 +205,10 @@ const ContentMemories1 = () => {
             </div>
           </div>
           <div class="flex justify-between items-center mt-8 px-2 py-5">
-            <button class="flex items-center gap-2 px-6 py-2 rounded-xl bg-white border-2 border-ink shadow-comic hover:translate-y-[2px] hover:shadow-comic-hover transition-all group font-bold text-lg">
+            <button
+              onClick={handlePrev}
+              class="flex items-center gap-2 px-6 py-2 rounded-xl bg-white border-2 border-ink shadow-comic hover:translate-y-[2px] hover:shadow-comic-hover transition-all group font-bold text-lg"
+            >
               <span class="material-symbols-outlined group-hover:-translate-x-1 transition-transform">
                 arrow_back
               </span>
@@ -202,7 +217,10 @@ const ContentMemories1 = () => {
             <span class="text-lg font-comic font-bold text-gray-500 hidden sm:block bg-white px-4 py-1 rounded-full border border-gray-300">
               Sử dụng phím mũi tên để điều hướng
             </span>
-            <button class="flex items-center gap-2 px-6 py-2 rounded-xl bg-primary text-white border-2 border-ink shadow-comic hover:translate-y-[2px] hover:shadow-comic-hover transition-all group font-bold text-lg">
+            <button
+              onClick={handleNext}
+              class="flex items-center gap-2 px-6 py-2 rounded-xl bg-primary text-white border-2 border-ink shadow-comic hover:translate-y-[2px] hover:shadow-comic-hover transition-all group font-bold text-lg"
+            >
               <span>Tiếp theo</span>
               <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">
                 arrow_forward

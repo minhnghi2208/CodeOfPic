@@ -1,5 +1,6 @@
 import HiChi from "../../assets/pic/HiChi.jpg";
-import cfne from "../../assets/pic/cfne.jpg";
+import bun from "../../assets/pic/bun.jpg";
+import pic1 from "../../assets/pic/pic1.jpg";
 const ContentMemories2 = () => {
   return (
     <>
@@ -9,9 +10,9 @@ const ContentMemories2 = () => {
             <span class="material-symbols-outlined">movie_filter</span>
             Dòng thời gian
           </h4>
-          <a class="text-lg font-bold text-primary hover:underline" href="#">
+          {/* <a class="text-lg font-bold text-primary hover:underline" href="#">
             Xem tất cả
-          </a>
+          </a> */}
         </div>
         <div class="flex gap-6 overflow-x-auto pb-4 snap-x scrollbar-hide px-2">
           <div class="snap-start shrink-0 w-52 group cursor-pointer">
@@ -40,7 +41,7 @@ const ContentMemories2 = () => {
               <div
                 class="w-full h-full bg-cover bg-center border border-gray-200"
                 style={{
-                  backgroundImage: `url(${cfne})`,
+                  backgroundImage: `url(${bun})`,
                 }}
               ></div>
             </div>
@@ -56,7 +57,7 @@ const ContentMemories2 = () => {
               <div
                 class="w-full h-full bg-cover bg-center border-2 border-white"
                 style={{
-                  backgroundImage: `url(${HiChi})`,
+                  backgroundImage: `url(${pic1})`,
                 }}
               ></div>
               <div class="absolute -top-2 -right-2 bg-xmas-gold border-2 border-ink rounded-full p-1 shadow-sm z-10">
@@ -66,7 +67,7 @@ const ContentMemories2 = () => {
               </div>
             </div>
             <p class="text-lg font-bold text-primary text-center leading-tight mt-2 py-2">
-              Chúng ta của hiện tại
+              In Love
             </p>
             <p class="text-sm text-center text-primary/80 font-sans font-semibold">
               25/12/2025

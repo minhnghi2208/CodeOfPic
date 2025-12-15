@@ -1,5 +1,27 @@
 import mainpic from "../../assets/pic/main.png";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 const Content1 = () => {
+  const [showPopup, setShowPopup] = useState(false);
+  const [titleButton, setTitleButton] = useState("Tiếp tục");
+  const [popupMessage, setPopupMessage] = useState("");
+  const navigate = useNavigate();
+  const goToLink = (link) => navigate(link);
+  const handleButtonClick = (choice) => {
+    if (choice === "Coá") {
+      setPopupMessage(`Sự lựa chọn sáng suốt đó cô bé`);
+      setTitleButton("Tiếp tục");
+    } else {
+      setPopupMessage("Em chỉ có 1 lựa chọn duy nhất là coá thôi Nhi à :))");
+      setTitleButton("Đóng");
+    }
+    setShowPopup(true);
+  };
+
+  const closePopup = (choice) => {
+    setPopupMessage(`${choice}`);
+    setShowPopup(false);
+  };
   return (
     <>
       <div class="layout-container flex w-full grow flex-col py-8 md:py-16 px-4 md:px-10">
@@ -62,14 +84,21 @@ const Content1 = () => {
                 <div class="bg-paper border-[3px] border-ink p-5 shadow-comic-sm mt-4 transform rotate-1">
                   <p class="text-lg font-medium leading-relaxed font-comic tracking-wide text-ink">
                     "Chào mừng Nhi đến với thế giới của Khle! Mong Giáng sinh
-                    này chúng mình coá nhau hehe. Làm ngiu Khoa nhé hihi. "
+                    này chúng mình coá nhau hehe. Làm ngiu Khoa nhé hihi."
+                    <br></br> " Xem hết trang này rùi quyết định nhá! "
                   </p>
                 </div>
                 <div class="flex flex-wrap gap-4 pt-4">
-                  <button class="flex cursor-pointer items-center justify-center h-14 px-8 bg-christmas-red text-white text-lg font-comic tracking-wider border-[3px] border-ink shadow-comic hover:shadow-comic-hover hover:translate-y-1 hover:translate-x-1 transition-all">
+                  <button
+                    onClick={() => handleButtonClick("Coá")}
+                    class="flex cursor-pointer items-center justify-center h-14 px-8 bg-christmas-red text-white text-lg font-comic tracking-wider border-[3px] border-ink shadow-comic hover:shadow-comic-hover hover:translate-y-1 hover:translate-x-1 transition-all"
+                  >
                     <span>Coá</span>
                   </button>
-                  <button class="flex cursor-pointer items-center justify-center h-14 px-8 bg-white text-ink text-lg font-comic tracking-wider border-[3px] border-ink shadow-comic hover:shadow-comic-hover hover:translate-y-1 hover:translate-x-1 transition-all">
+                  <button
+                    onClick={() => handleButtonClick("Khum")}
+                    class="flex cursor-pointer items-center justify-center h-14 px-8 bg-white text-ink text-lg font-comic tracking-wider border-[3px] border-ink shadow-comic hover:shadow-comic-hover hover:translate-y-1 hover:translate-x-1 transition-all"
+                  >
                     <span>Khum </span>
                   </button>
                 </div>
@@ -92,6 +121,21 @@ const Content1 = () => {
           </div>
         </div>
       </div>
+      {showPopup && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+          <div className="bg-white p-6 rounded-xl border-2 border-ink shadow-comic max-w-sm text-center">
+            <p className="text-lg font-comic mb-4">{popupMessage}</p>
+            <button
+              className="px-6 py-2 bg-christmas-red text-white border-2 border-ink shadow-comic hover:shadow-comic-hover transition-all"
+              onClick={() =>
+                titleButton === "Đóng" ? closePopup() : goToLink("/memories")
+              }
+            >
+              {titleButton}
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 };

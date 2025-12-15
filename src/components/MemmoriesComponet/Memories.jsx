@@ -3,6 +3,7 @@ import Footer from "../Layout/Footer";
 import Title from "./Title";
 import ContentMemories1 from "./ContentMemories1";
 import ContentMemories2 from "./ContentMemories2";
+import Moments from "./Moments";
 const Memories = () => {
   return (
     <>
@@ -11,6 +12,7 @@ const Memories = () => {
         <Title></Title>
         <ContentMemories1></ContentMemories1>
         <ContentMemories2></ContentMemories2>
+        <Moments></Moments>
       </div>
       <Footer></Footer>
     </>

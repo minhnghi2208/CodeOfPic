@@ -18,8 +18,8 @@ const Title = () => {
             Hành Trình Của Chúng Ta
           </h2>
           <p class="text-xl text-gray-700 max-w-xl font-medium bg-white/80 p-2 rounded-lg inline-block border border-dashed border-gray-400">
-            Mỗi bức thư là một mảnh ghép kỷ niệm. Hãy mở từng trang để sống lại
-            những khoảnh khắc tuyệt vời nhất.
+            Mỗi bức thư là những suy nghĩ và kỷ niệm của Khoa với Nhi. Sến lắm
+            chuẩn bị tâm lý trước khi đọc {":))"}.
           </p>
         </div>
         {/* <div class="flex items-center gap-3 bg-white p-2 rounded-xl border-2 border-ink shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">

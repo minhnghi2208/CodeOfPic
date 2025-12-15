@@ -15,11 +15,11 @@ const Content3 = () => {
           <div class="flex flex-col items-center gap-4 text-center max-w-[720px] mb-12">
             <div class="inline-block bg-christmas-red text-white px-4 py-1 border-2 border-ink shadow-comic-sm transform rotate-2">
               <span class="font-comic text-lg tracking-wider">
-                SPECIAL EDITION
+                Photo
               </span>
             </div>
-            <h2 class="text-5xl md:text-6xl font-comic text-ink drop-shadow-[2px_2px_0px_rgba(0,0,0,0.2)]">
-              BEST PHOTO 
+            <h2 class="text-5xl py-2 md:text-6xl font-comic text-ink drop-shadow-[2px_2px_0px_rgba(0,0,0,0.2)]">
+              Sao mà xinh z???
             </h2>
             <div class="w-full h-2 bg-ink rounded-full mt-2 relative">
               <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-paper px-4">
