@@ -76,9 +76,28 @@
         box-shadow: 6px 6px 0px #1d1d1d;
         transition: transform 0.1s;
       }
+      .comic-card-open {
+        background-color: #fffdf5;
+        background-image: linear-gradient(
+          to right,
+          transparent 49%,
+          #e5e5e5 50%,
+          transparent 51%
+        );
+      }
       .comic-panel:hover {
         transform: translate(-2px, -2px);
         box-shadow: 8px 8px 0px #1d1d1d;
+      }
+
+      .candy-border {
+        background: repeating-linear-gradient(
+          45deg,
+          #d42426,
+          #d42426 10px,
+          #ffffff 10px,
+          #ffffff 20px
+        );
       }
       .snow-bg {
         background-color: #f8f9fa;
@@ -86,6 +105,9 @@
           radial-gradient(#dbeafe 2px, transparent 2px);
         background-size: 30px 30px;
         background-position: 0 0, 15px 15px;
+      }
+      .bg-halftone {
+        background-size: 20px 20px;
       }
     </style>
   </head>

@@ -15,13 +15,13 @@ const Footer = () => {
         </div>
         <div class="bg-white border-2 border-ink p-4 rounded-lg text-ink max-w-md shadow-comic-sm">
           <p class="font-comic text-lg uppercase">
-            "THE END OF CHAPTER 25. TO BE CONTINUED..."
+            "THE END OF NOEl. TO BE CONTINUED..."
           </p>
         </div>
         <p class="text-gray-300 text-sm mt-4 font-medium">
-          © 2023. Gửi tặng Lan với tất cả tình yêu thương mùa Giáng sinh.
+          25/12/2025. Gửi tặng Nhi với tất cả tình yêu của Khoa .
         </p>
-        <div class="flex gap-4 mt-2">
+        {/* <div class="flex gap-4 mt-2">
           <a
             class="bg-white text-ink p-2 border-2 border-ink rounded hover:bg-christmas-red hover:text-white transition-colors"
             href="#"
@@ -58,7 +58,7 @@ const Footer = () => {
               ></path>
             </svg>
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
   );

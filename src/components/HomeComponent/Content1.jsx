@@ -1,3 +1,4 @@
+import mainpic from "../../assets/pic/main.png";
 const Content1 = () => {
   return (
     <>
@@ -19,12 +20,13 @@ const Content1 = () => {
                 <div
                   class="relative w-full aspect-[4/3] bg-center bg-no-repeat bg-cover border-[3px] border-ink shadow-comic bg-gray-200"
                   style={{
-                    backgroundImage:
-                      "url('https://scontent.fhan5-3.fna.fbcdn.net/v/t1.15752-9/593212249_1146621630563795_7981322303993727563_n.png?stp=dst-png_s480x480&_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_ohc=Lj8S5JoUBP0Q7kNvwGMy4Cf&_nc_oc=AdmhOzpYZTkOyTBIe5OJV3M3AKJMwglEQrONsx-TIJhToUioAd3K_RYvChqY-UsHgGwyQAJmzAbuVFdlQMBNo_Ep&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fhan5-3.fna&oh=03_Q7cD4AErdn4dFvKOcrASOi5eXgb16xXEa0qG7GOAU3cyRgk9Bg&oe=6965DE9C')",
+                    backgroundImage: `url(${mainpic})`,
                   }}
                 >
                   <div class="absolute -top-4 -left-4 bg-christmas-gold border-[3px] border-ink px-4 py-1 shadow-comic-sm transform -rotate-2">
-                    <span class="font-comic text-xl text-ink">CHAPTER 25</span>
+                    <span class="font-comic text-xl text-ink">
+                      CHAPTER NOEL
+                    </span>
                   </div>
                   <div class="absolute bottom-4 right-4 bg-white border-[3px] border-ink px-3 py-2 flex items-center gap-2 shadow-comic-sm">
                     <span class="material-symbols-outlined text-christmas-red">
@@ -59,18 +61,16 @@ const Content1 = () => {
                 </div>
                 <div class="bg-paper border-[3px] border-ink p-5 shadow-comic-sm mt-4 transform rotate-1">
                   <p class="text-lg font-medium leading-relaxed font-comic tracking-wide text-ink">
-                    "Chào mừng Lan đến với tuổi 25 rực rỡ! Giữa không khí Giáng
-                    sinh ấm áp, mong bạn luôn tỏa sáng như ngôi sao trên đỉnh
-                    cây thông Noel. Hãy viết tiếp câu chuyện tuyệt vời của mình
-                    nhé!"
+                    "Chào mừng Nhi đến với thế giới của Khle! Mong Giáng sinh
+                    này chúng mình coá nhau hehe. Làm ngiu Khoa nhé hihi. "
                   </p>
                 </div>
                 <div class="flex flex-wrap gap-4 pt-4">
                   <button class="flex cursor-pointer items-center justify-center h-14 px-8 bg-christmas-red text-white text-lg font-comic tracking-wider border-[3px] border-ink shadow-comic hover:shadow-comic-hover hover:translate-y-1 hover:translate-x-1 transition-all">
-                    <span>GỬI LỜI CHÚC</span>
+                    <span>Coá</span>
                   </button>
                   <button class="flex cursor-pointer items-center justify-center h-14 px-8 bg-white text-ink text-lg font-comic tracking-wider border-[3px] border-ink shadow-comic hover:shadow-comic-hover hover:translate-y-1 hover:translate-x-1 transition-all">
-                    <span>XEM ALBUM</span>
+                    <span>Khum </span>
                   </button>
                 </div>
               </div>
@@ -78,16 +78,16 @@ const Content1 = () => {
           </div>
           <div class="mt-8 grid grid-cols-3 gap-4">
             <div class="bg-christmas-green border-[3px] border-ink p-4 shadow-comic-sm text-white text-center rounded-lg">
-              <p class="font-comic text-3xl">LEVEL 25</p>
-              <p class="text-xs font-bold uppercase">Unlocked</p>
+              <p class="font-comic text-3xl">I</p>
+              {/* <p class="text-xs font-bold uppercase">Unlocked</p> */}
             </div>
             <div class="bg-white border-[3px] border-ink p-4 shadow-comic-sm text-center rounded-lg transform -translate-y-2">
-              <p class="font-comic text-3xl text-christmas-red">100+</p>
-              <p class="text-xs font-bold uppercase">Tin nhắn</p>
+              <p class="font-comic text-3xl text-christmas-red">Love</p>
+              {/* <p class="text-xs font-bold uppercase">Tin nhắn</p> */}
             </div>
             <div class="bg-christmas-gold border-[3px] border-ink p-4 shadow-comic-sm text-center rounded-lg">
-              <p class="font-comic text-3xl">MAX</p>
-              <p class="text-xs font-bold uppercase">Yêu thương</p>
+              <p class="font-comic text-3xl">YOU</p>
+              {/* <p class="text-xs font-bold uppercase">Yêu thương</p> */}
             </div>
           </div>
         </div>
