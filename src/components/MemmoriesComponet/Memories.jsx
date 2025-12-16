@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Header from "../Layout/Header";
 import Footer from "../Layout/Footer";
 import Title from "./Title";
@@ -5,6 +6,9 @@ import ContentMemories1 from "./ContentMemories1";
 import ContentMemories2 from "./ContentMemories2";
 import Moments from "./Moments";
 const Memories = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <>
       <Header></Header>
