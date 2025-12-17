@@ -67,7 +67,7 @@ const Header = () => {
           {openMenu && (
             <div className="lg:hidden justify-center mt-4 bg-white border-2 border-ink rounded-xl shadow-comic p-4 space-y-3">
               <button
-                onClick={() => goToLink("/")}
+                onClick={() => goToLink("/home")}
                 className="block w-full text-left font-bold hover:text-christmas-red"
               >
                 Trang chủ
