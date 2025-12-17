@@ -20,7 +20,7 @@ const Login = () => {
 
   const [password, setPassword] = useState("");
   const [openMenu, setOpenMenu] = useState(false);
-
+  const [showWarning, setShowWarning] = useState(true);
   const [showPasswordModal, setShowPasswordModal] = useState(false);
   const [showIncorectPasssword, setShowIncorectPasssword] = useState(false);
   const starBg = `data:image/svg+xml;utf8,
@@ -309,6 +309,26 @@ const Login = () => {
 
             <button
               onClick={() => setShowIncorectPasssword(false)}
+              className="w-full h-10 bg-primary text-white font-black uppercase border-2 border-[#181111]"
+            >
+              Đóng
+            </button>
+          </div>
+        </div>
+      )}
+
+      {showWarning && (
+        <div className="fixed inset-0 z-[999] flex items-center justify-center bg-black/50">
+          <div className="bg-white dark:bg-[#2a1515] rounded-xl border-2 border-[#181111] shadow-comic p-6 w-[90%] max-w-sm">
+            <p className="text-lg font-bold text-center mb-4">
+              {/* 🔐 Mật khẩu là: <span className="text-primary">22082004</span> */}
+              <span className="text-primary">Cảnh báo</span>
+              <br></br> Những gì Nhi sắp đọc và thấy sẽ rất sến cân nhắc trước
+              khi xem!
+            </p>
+
+            <button
+              onClick={() => setShowWarning(false)}
               className="w-full h-10 bg-primary text-white font-black uppercase border-2 border-[#181111]"
             >
               Đóng
