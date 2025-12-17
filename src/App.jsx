@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/HomeComponent/Home";
 import Memories from "./components/MemmoriesComponet/Memories";
-import LastMail from "./components/lastMailComponet/lastMail";
+import LastMail from "./components/lastMailComponet/LastMail";
 import Login from "./components/LoginComponet/Login";
 export default function App() {
   return (
