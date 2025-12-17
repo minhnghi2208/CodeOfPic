@@ -29,7 +29,7 @@ const Header = () => {
             <div className="hidden lg:flex flex-1 justify-end gap-6 items-center">
               <nav className="flex items-center gap-6 mr-6">
                 <button
-                  onClick={() => goToLink("/")}
+                  onClick={() => goToLink("/home")}
                   className="text-sm font-bold uppercase hover:text-christmas-red hover:underline decoration-2 underline-offset-4 transition-all"
                 >
                   Trang chủ
@@ -65,9 +65,9 @@ const Header = () => {
 
           {/* MOBILE MENU CONTENT */}
           {openMenu && (
-            <div className="lg:hidden mt-4 bg-white border-2 border-ink rounded-xl shadow-comic p-4 space-y-3">
+            <div className="lg:hidden justify-center mt-4 bg-white border-2 border-ink rounded-xl shadow-comic p-4 space-y-3">
               <button
-                onClick={() => goToLink("/")}
+                onClick={() => goToLink("/home")}
                 className="block w-full text-left font-bold hover:text-christmas-red"
               >
                 Trang chủ
@@ -77,6 +77,20 @@ const Header = () => {
                 className="block w-full text-left font-bold hover:text-christmas-red"
               >
                 Hành trình
+              </button>
+
+              {/* <button
+                onClick={() => goToLink("/login")}
+                className="block w-full text-left font-bold text-christmas-red"
+              >
+                Đăng xuất
+              </button> */}
+
+              <button
+                onClick={() => goToLink("/login")}
+                className="flex items-center justify-center rounded-lg h-10 px-6 bg-christmas-red text-white text-sm font-bold border-2 border-ink shadow-comic hover:shadow-comic-hover hover:translate-y-[2px] hover:translate-x-[2px] transition-all"
+              >
+                Đăng xuất
               </button>
             </div>
           )}

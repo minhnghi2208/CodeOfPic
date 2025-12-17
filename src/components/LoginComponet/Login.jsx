@@ -9,8 +9,20 @@ const Login = () => {
   const goToLink = (link) => {
     navigate(link);
   };
-  const [password, setPassword] = useState("");
 
+  const handleLogin = () => {
+    if (password === "22082004") {
+      goToLink("/home");
+    } else {
+      setShowIncorectPasssword(true);
+    }
+  };
+
+  const [password, setPassword] = useState("");
+  const [openMenu, setOpenMenu] = useState(false);
+
+  const [showPasswordModal, setShowPasswordModal] = useState(false);
+  const [showIncorectPasssword, setShowIncorectPasssword] = useState(false);
   const starBg = `data:image/svg+xml;utf8,
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <path d="M50 0 L63 35 L100 35 L70 57 L82 92 L50 70 L18 92 L30 57 L0 35 L37 35 Z"
@@ -36,41 +48,68 @@ const Login = () => {
       <div class="bg-background-light dark:bg-background-dark text-[#181111] dark:text-white font-display overflow-x-hidden transition-colors duration-200">
         <div class="fixed inset-0 pointer-events-none z-0 bg-halftone dark:bg-halftone-dark bg-dots opacity-40"></div>
         <div class="relative flex min-h-screen w-full flex-col z-10">
-          <div class="flex items-center justify-between whitespace-nowrap border-b-4 border-[#181111] bg-white dark:bg-[#2a1515] dark:border-[#f20d0d] px-6 lg:px-10 py-4 shadow-md sticky top-0 z-50">
-            <div class="flex items-center gap-4 text-[#181111] dark:text-white">
-              <div class="size-8 text-primary animate-bounce">
-                <span class="material-symbols-outlined text-4xl">
-                  celebration
-                </span>
+          <div className="relative">
+            <div className="flex items-center justify-between border-b-4 border-[#181111] bg-white dark:bg-[#2a1515] px-6 lg:px-10 py-4 shadow-md sticky top-0 z-50">
+              {/* LEFT */}
+              <div className="flex items-center gap-4 text-[#181111] dark:text-white">
+                <div className="size-8 text-primary animate-bounce">
+                  <span className="material-symbols-outlined text-4xl">
+                    celebration
+                  </span>
+                </div>
+                <h2 className="text-xl lg:text-2xl font-black uppercase italic">
+                  Welcome to my world!
+                </h2>
               </div>
-              <h2 class="text-[#181111] dark:text-white text-xl lg:text-2xl font-black uppercase tracking-tight italic">
-                Welcome to my world!
-              </h2>
-            </div>
-            <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
-              <div class="flex items-center gap-9">
-                <p
-                  class="text-[#181111] dark:text-gray-200 text-sm font-bold hover:text-primary transition-colors uppercase"
-                  href="#"
-                >
+
+              {/* DESKTOP MENU */}
+              <div className="hidden md:flex items-center gap-6">
+                <p className="text-sm font-bold uppercase text-[#181111] dark:text-gray-200">
                   Khi nào không biết mật khẩu rồi hãy click nhá!
                 </p>
+
+                <button
+                  onClick={() =>
+                    alert(
+                      "Click vào đây là không nhớ rồi 😭! Mật khẩu là: 22082004"
+                    )
+                  }
+                  className="h-10 px-6 bg-primary text-white text-sm font-black uppercase border-2 border-[#181111] shadow-[2px_2px_0px_0px_#181111]"
+                >
+                  Mật khẩu
+                </button>
               </div>
-              <button
-                onClick={() => {
-                  alert(
-                    "Click vào đây là không nhớ rồi 😭! Mật khẩu là: 22082004"
-                  );
-                }}
-                class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-6 bg-primary text-white text-sm font-black uppercase tracking-wider border-2 border-[#181111] shadow-[2px_2px_0px_0px_#181111] active:shadow-none active:translate-x-[2px] active:translate-y-[2px] transition-all"
-              >
-                <span class="truncate">Mật khẩu</span>
-              </button>
+
+              {/* MOBILE BUTTON */}
+              <div className="md:hidden">
+                <button
+                  onClick={() => setOpenMenu(!openMenu)}
+                  className="p-2 border-2 border-[#181111] rounded shadow-comic-sm"
+                >
+                  <span className="material-symbols-outlined">
+                    {openMenu ? "close" : "menu"}
+                  </span>
+                </button>
+              </div>
             </div>
 
-            {/* <button class="md:hidden text-[#181111] dark:text-white">
-              <span class="material-symbols-outlined text-3xl">menu</span>
-            </button> */}
+            {openMenu && (
+              <div className="md:hidden bg-white dark:bg-[#2a1515] border-b-4 border-[#181111] px-6 py-4 space-y-4 shadow-md">
+                <p className="text-sm font-bold uppercase text-[#181111] dark:text-gray-200">
+                  Khi nào không biết mật khẩu rồi hãy click nhá!
+                </p>
+
+                <button
+                  onClick={() => {
+                    setShowPasswordModal(true);
+                    setOpenMenu(false);
+                  }}
+                  className="w-full h-10 bg-primary text-white font-black uppercase border-2 border-[#181111] shadow-[2px_2px_0px_0px_#181111]"
+                >
+                  Mật khẩu
+                </button>
+              </div>
+            )}
           </div>
 
           <div class="flex-1 flex items-center justify-center p-4 lg:p-8 relative">
@@ -140,7 +179,13 @@ const Login = () => {
                     Nhập mật khẩu để mở hộp quà bí mật của Khle!
                   </p>
                 </div>
-                <form class="space-y-6">
+                <form
+                  class="space-y-6"
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    handleLogin();
+                  }}
+                >
                   <div class="space-y-2 group">
                     <label class="flex items-center gap-2 text-[#181111] dark:text-white text-sm font-bold uppercase tracking-wide">
                       <span class="material-symbols-outlined text-primary text-lg">
@@ -182,14 +227,15 @@ const Login = () => {
 
                   <button
                     class="w-full h-14 mt-4 bg-primary text-white text-xl font-black uppercase tracking-widest rounded-lg border-2 border-[#181111] shadow-[4px_4px_0px_0px_#181111] hover:bg-red-600 comic-button flex items-center justify-center gap-3"
-                    type="button"
-                    onClick={() => {
-                      if (password === "22082004") {
-                        goToLink("/");
-                      } else {
-                        alert("Sai mật khẩu rồi 😭 thử lại nha!");
-                      }
-                    }}
+                    type="submit"
+                    // onClick={() => {
+                    //   if (password === "22082004") {
+                    //     goToLink("/home");
+                    //   } else {
+                    //     // alert("Sai mật khẩu rồi 😭 thử lại nha!");
+                    //     setShowIncorectPasssword(true);
+                    //   }
+                    // }}
                   >
                     <span>Mở Quà Ngay</span>
                     <span class="material-symbols-outlined font-black">
@@ -237,6 +283,42 @@ const Login = () => {
           </footer>
         </div>
       </div>
+
+      {showPasswordModal && (
+        <div className="fixed inset-0 z-[999] flex items-center justify-center bg-black/50">
+          <div className="bg-white dark:bg-[#2a1515] rounded-xl border-2 border-[#181111] shadow-comic p-6 w-[90%] max-w-sm">
+            <p className="text-lg font-bold text-center mb-4">
+              🔐 Mật khẩu là: <span className="text-primary">22082004</span>
+            </p>
+
+            <button
+              onClick={() => setShowPasswordModal(false)}
+              className="w-full h-10 bg-primary text-white font-black uppercase border-2 border-[#181111]"
+            >
+              Đóng
+            </button>
+          </div>
+        </div>
+      )}
+
+      {showIncorectPasssword && (
+        <div className="fixed inset-0 z-[999] flex items-center justify-center bg-black/50">
+          <div className="bg-white dark:bg-[#2a1515] rounded-xl border-2 border-[#181111] shadow-comic p-6 w-[90%] max-w-sm">
+            <p className="text-lg font-bold text-center mb-4">
+              {/* 🔐 Mật khẩu là: <span className="text-primary">22082004</span> */}
+              Không nhớ ngày sinh của Khoa rùi. <br></br> Vào menu chọn mật khẩu
+              nhá để có gợi ý.
+            </p>
+
+            <button
+              onClick={() => setShowIncorectPasssword(false)}
+              className="w-full h-10 bg-primary text-white font-black uppercase border-2 border-[#181111]"
+            >
+              Đóng
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 };
