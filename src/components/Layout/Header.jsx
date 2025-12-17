@@ -67,7 +67,7 @@ const Header = () => {
           {openMenu && (
             <div className="lg:hidden justify-center mt-4 bg-white border-2 border-ink rounded-xl shadow-comic p-4 space-y-3">
               <button
-                onClick={() => goToLink("/home")}
+                onClick={() => goToLink("/")}
                 className="block w-full text-left font-bold hover:text-christmas-red"
               >
                 Trang chủ
@@ -87,7 +87,7 @@ const Header = () => {
               </button> */}
 
               <button
-                onClick={() => goToLink("/login")}
+                onClick={() => goToLink("/")}
                 className="flex items-center justify-center rounded-lg h-10 px-6 bg-christmas-red text-white text-sm font-bold border-2 border-ink shadow-comic hover:shadow-comic-hover hover:translate-y-[2px] hover:translate-x-[2px] transition-all"
               >
                 Đăng xuất
