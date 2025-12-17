@@ -69,11 +69,7 @@ const Login = () => {
                 </p>
 
                 <button
-                  onClick={() =>
-                    alert(
-                      "Click vào đây là không nhớ rồi 😭! Mật khẩu là: 22082004"
-                    )
-                  }
+                  onClick={() => setShowPasswordModal(true)}
                   className="h-10 px-6 bg-primary text-white text-sm font-black uppercase border-2 border-[#181111] shadow-[2px_2px_0px_0px_#181111]"
                 >
                   Mật khẩu
