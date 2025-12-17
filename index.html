@@ -109,6 +109,53 @@
       .bg-halftone {
         background-size: 20px 20px;
       }
+
+      .mail-perspective {
+        perspective: 2000px;
+      }
+
+      .mail-page {
+        position: absolute;
+        inset: 0;
+        transform-style: preserve-3d;
+        transition: transform 0.9s ease;
+        transform-origin: left center;
+      }
+
+      .mail-page.flipped {
+        transform: rotateY(-180deg);
+      }
+
+      .mail-front,
+      .mail-back {
+        position: absolute;
+        inset: 0;
+        backface-visibility: hidden;
+      }
+
+      .mail-back {
+        transform: rotateY(180deg);
+      }
+
+      .comic-border {
+        border: 3px solid #181111;
+        box-shadow: 6px 6px 0px 0px #181111;
+      }
+      .comic-input:focus {
+        box-shadow: 4px 4px 0px 0px #f20d0d;
+        border-color: #181111;
+        transform: translate(-1px, -1px);
+      }
+      .comic-button {
+        transition: all 0.1s ease;
+      }
+      .comic-button:active {
+        transform: translate(4px, 4px);
+        box-shadow: 0px 0px 0px 0px #181111;
+      }
+      .bg-dots {
+        background-size: 20px 20px;
+      }
     </style>
   </head>
   <body>

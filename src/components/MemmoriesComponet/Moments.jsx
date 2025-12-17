@@ -8,6 +8,7 @@ import moki2 from "../../assets/momentsPic/moki2.jpg";
 import hichine from "../../assets/momentsPic/hichine.jpg";
 import hoixuan from "../../assets/momentsPic/hoixuan.jpg";
 import bun from "../../assets/pic/bun.jpg";
+import phim from "../../assets/momentsPic/phim.jpg";
 import { useNavigate } from "react-router-dom";
 const Moments = () => {
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ const Moments = () => {
       <div class="w-full max-w-[1400px] px-4 md:px-10 pb-8 pt-5">
         <div class="flex flex-wrap gap-4 items-end pt-5">
           <div class="font-comic font-bold text-xl uppercase -rotate-2 mr-4 bg-yellow-300 px-3 py-1 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
-            Khoảnh khắc
+            Khoảnh khắc cùng nhau.
           </div>
           {/* <button class="flex h-12 items-center gap-2 bg-black text-white px-6 font-comic font-bold uppercase border-2 border-black shadow-comic hover:-translate-y-1 transition-all">
             <span>Tất cả</span>
@@ -252,7 +253,7 @@ const Moments = () => {
                 <img
                   alt="Group of friends celebrating at a party"
                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  src={hichine}
+                  src={phim}
                 />
                 {/* <div class="absolute inset-0 flex items-center justify-center">
                   <div class="w-16 h-16 bg-primary/90 border-2 border-white rounded-full flex items-center justify-center shadow-[0_0_0_4px_rgba(0,0,0,1)] group-hover:scale-110 transition-transform">

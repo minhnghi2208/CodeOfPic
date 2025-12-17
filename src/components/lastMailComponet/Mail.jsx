@@ -1,4 +1,18 @@
+import { useState } from "react";
 const Mail = () => {
+  const [index, setIndex] = useState(0);
+  const message = [
+    {
+      abc: "đây là lá thư cuối cùng của ngày, trước khi quen Nhi thì mỗi ngày của khoa trôi qua khá bình thường không có gì đặc biệt và ngày qua ngày vẫn vậy, từ khi Nhi đến thì mỗi ngày của trở nên đặc biệt hơn. Khoa không cần phải làm gì đó 1 mình nữa, có người để nhắn tin, chia sẻ và thật sự rất vui.",
+    },
+    {
+      abc: "Hôm nay là giáng sinh đầu tiên mà mình bên nhau và khoa cũng mong Nhi có nhiều hơn những mùa giáng sinh vui vẻ và tất nhiên là cùng khoa hehe. Có lẽ Khoa thích Nhi từ nhiều thứ hiện diện thuộc về Nhi nhưng ...",
+    },
+    {
+      abc: "có thể Nhi cũng đã nghe khoa nói khoa thích nhất ở Nhi là đôi mắt, nên khoa mong đôi mắt đó sẽ luôn có khoa trong và không khóc nhè nữa nha. Đây là những gì khoa đã chuẩn bị bằng tất cả tình iu của Khoa có thể chưa được hoàn hảo nhất nhưng mong là khiến Nhi vui và thích khoa hơn. Cảm ơn Nhi đã cho Khoa cơ hội để được ở bên Nhi nè. Luv U !",
+    },
+  ];
+
   return (
     <>
       <div class="flex-1 flex flex-col items-center justify-center p-4 md:p-8 bg-pattern relative">
@@ -51,22 +65,27 @@ const Mail = () => {
                   <h4 class="font-bangers text-3xl text-primary mb-4 tracking-wide">
                     Giáng Sinh An Lành
                   </h4>
+
                   <p className="font-comic text-lg md:text-xl text-[#181111] dark:text-gray-100 leading-relaxed">
-                    Dear: Nhi <br></br> "đây là lá thư cuối cùng của ngày, nay
-                    là giáng sinh đầu tiên mà mình bên nhau và khoa cũng mong
-                    Nhi có nhiều hơn những mùa giáng sinh vui vẻ và tất nhiên là
-                    cùng khoa hehe. Có lẽ Khoa thích Nhi từ nhiều thứ hiện diện
-                    thuộc về Nhi nhưng ... có thể Nhi cũng đã nghe khoa nói thứ
-                    khoa thích nhất ở Nhi là đôi mắt, nên là khoa mong đôi mắt
-                    đó sẽ luôn có khoa trong tầm mắt và không khóc nhè nữa nha.
-                    Và đây là toàn bộ những gì khoa đã chuẩn bị có thể chưa được
-                    hoàn hảo nhất nhưng mong là khiến Nhi vui và thích khoa hơn
-                    1 chút nè. Luv U !"
+                    Dear: Nhi <br />
+                    {message[index].abc}
                   </p>
                   <p class="text-right text-gray-500 text-lg mt-2 font-bold">
                     - - Khle - -
                   </p>
-
+                  <div class="mt-8 pt-2 border-t-2 border-dashed border-gray-300 flex items-center justify-end">
+                    <button
+                      onClick={() =>
+                        setIndex((prev) => (prev + 1) % message.length)
+                      }
+                      className="group flex items-center gap-2 text-primary hover:text-primary-dark font-bold text-lg transition-colors"
+                    >
+                      Tiếp theo
+                      <span className="material-symbols-outlined text-2xl transition-transform group-hover:translate-x-1 group-hover:scale-110">
+                        arrow_right_alt
+                      </span>
+                    </button>
+                  </div>
                   <div class="flex justify-end mt-4 text-primary/40 gap-2">
                     <span class="material-symbols-outlined">ac_unit</span>
                     <span class="material-symbols-outlined">forest</span>
