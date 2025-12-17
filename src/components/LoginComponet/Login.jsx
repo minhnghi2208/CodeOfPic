@@ -284,7 +284,8 @@ const Login = () => {
         <div className="fixed inset-0 z-[999] flex items-center justify-center bg-black/50">
           <div className="bg-white dark:bg-[#2a1515] rounded-xl border-2 border-[#181111] shadow-comic p-6 w-[90%] max-w-sm">
             <p className="text-lg font-bold text-center mb-4">
-              🔐 Mật khẩu là: <span className="text-primary">22082004</span>
+              Bùn thiệt chứ bae 🔐 Mật khẩu là:{" "}
+              <span className="text-primary">22082004</span>
             </p>
 
             <button
