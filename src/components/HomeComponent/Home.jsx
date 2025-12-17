@@ -3,7 +3,11 @@ import Footer from "../Layout/Footer";
 import Content1 from "./Content1";
 import Content2 from "./Content2";
 import Content3 from "./Content3";
+import { useEffect } from "react";
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <>
       <Header></Header>
