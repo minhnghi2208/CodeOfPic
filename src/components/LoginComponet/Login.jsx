@@ -307,7 +307,7 @@ const Login = () => {
             <p className="text-lg font-bold text-center mb-4">
               {/* 🔐 Mật khẩu là: <span className="text-primary">22082004</span> */}
               Không nhớ ngày sinh của Khoa rùi. <br></br> Vào menu chọn mật khẩu
-              nhá để có gợi ý.
+              nhá để có gợi ý!
             </p>
 
             <button
