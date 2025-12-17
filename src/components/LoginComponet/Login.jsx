@@ -322,7 +322,7 @@ const Login = () => {
           <div className="bg-white dark:bg-[#2a1515] rounded-xl border-2 border-[#181111] shadow-comic p-6 w-[90%] max-w-sm">
             <p className="text-lg font-bold text-center mb-4">
               {/* 🔐 Mật khẩu là: <span className="text-primary">22082004</span> */}
-              <span className="text-primary">Cảnh báo</span>
+              <span className="text-red-500">Cảnh báo</span>
               <br></br> Những gì Nhi sắp đọc và thấy sẽ rất sến cân nhắc trước
               khi xem!
             </p>
