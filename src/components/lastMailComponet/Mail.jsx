@@ -1,3 +1,4 @@
+import snowman from "../../assets/pic/snowman.jpg";
 import { useState } from "react";
 const Mail = () => {
   const [index, setIndex] = useState(0);
@@ -34,8 +35,7 @@ const Mail = () => {
                 class="w-full h-full bg-cover bg-center"
                 data-alt="Cute comic style snowman illustration smiling with a red scarf"
                 style={{
-                  backgroundImage:
-                    'url("https://lh3.googleusercontent.com/aida-public/AB6AXuCa2ksGugih8yW5MRakTKNd6m3d7t9p9ZB2X98GQ6DjrIaYHQaLtVW5AwJHb27bkdys01yU4r4vqyC_h5GDhtoH64Z1ish6k-n3W8Frs2mfu6V4pgcrgcbwg2OZO-67JQ3AEg3PPFGFLEFImoy_6Y5z19yVexLMNExzmlRzflYoY64FxQq2Qh8Tuneit1gmu5hv44wwZLGzW-rUQV2Qjj3hIwX3VbtCAzy1hjT2WKMI0Ir8xcgovBLEjNhQlwIAotAee1Fh3R025AI")',
+                  backgroundImage: `url(${snowman})`,
                 }}
               ></div>
             </div>
