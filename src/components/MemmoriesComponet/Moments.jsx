@@ -1,15 +1,7 @@
-import caulong1 from "../../assets/momentsPic/caulong1.jpg";
-import banh from "../../assets/momentsPic/banh.jpg";
-import takayaki from "../../assets/momentsPic/takayaki.jpg";
-import chelien from "../../assets/momentsPic/chelien.jpg";
-import sua from "../../assets/momentsPic/sua.jpg";
-import lego from "../../assets/momentsPic/lego.jpg";
-import moki2 from "../../assets/momentsPic/moki2.jpg";
-import hichine from "../../assets/momentsPic/hichine.jpg";
-import hoixuan from "../../assets/momentsPic/hoixuan.jpg";
-import bun from "../../assets/pic/bun.jpg";
-import phim from "../../assets/momentsPic/phim.jpg";
+import { momentsImages } from "../../assets/momentsPic/momentData.js";
+import moingon from "../../assets/momentsPic/moingon.mp4";
 import { useNavigate } from "react-router-dom";
+import VideoBlock from "./VideoBlock";
 const Moments = () => {
   const navigate = useNavigate();
   const goToLink = (link) => navigate(link);
@@ -37,7 +29,7 @@ const Moments = () => {
 
       <div class="w-full max-w-[1400px] px-4 md:px-10 pb-20">
         <div class="bg-white border-4 border-black p-4 md:p-8 shadow-comic">
-          <div class="grid grid-cols-1 md:grid-cols-6 md:grid-rows-4 gap-6 h-auto md:h-[1600px]">
+          <div class="grid grid-cols-1 md:grid-cols-6 md:grid-rows-4 gap-6 h-auto md:h-[2000px]">
             <div class="col-span-1 md:col-span-3 md:row-span-2 relative group cursor-pointer">
               <div class="absolute -top-3 -left-3 z-20 w-10 h-10 bg-primary rounded-full border-2 border-black flex items-center justify-center text-white font-black font-comic shadow-[2px_2px_0px_0px_#000]">
                 1
@@ -54,7 +46,7 @@ const Moments = () => {
                 <img
                   alt="Portrait of birthday person smiling with a cake"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 filter group-hover:contrast-125"
-                  src={lego}
+                  src={momentsImages.lego}
                 />
 
                 <div class="absolute bottom-0 left-0 bg-white border-t-2 border-r-2 border-black p-3 max-w-[80%]">
@@ -74,7 +66,7 @@ const Moments = () => {
                 <img
                   alt="Graduation ceremony photo"
                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 filter sepia-[.3] group-hover:sepia-0"
-                  src={banh}
+                  src={momentsImages.banh}
                 />
                 <div class="absolute top-4 left-4 bg-white border-2 border-black p-2 rotate-2 shadow-sm">
                   <p class="font-comic font-bold text-xs uppercase">
@@ -92,7 +84,7 @@ const Moments = () => {
                 <img
                   alt="Childhood photo playing in the garden"
                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  src={takayaki}
+                  src={momentsImages.takayaki}
                 />
                 <div class="absolute inset-0 bg-primary/20 mix-blend-multiply group-hover:bg-transparent transition-colors"></div>
                 <div class="absolute bottom-4 right-4 bg-white border-2 border-black rounded-full px-3 py-1 -rotate-6">
@@ -115,7 +107,7 @@ const Moments = () => {
                 <img
                   alt="Group of friends celebrating at a party"
                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  src={hichine}
+                  src={momentsImages.hichine}
                 />
                 {/* <div class="absolute inset-0 flex items-center justify-center">
                   <div class="w-16 h-16 bg-primary/90 border-2 border-white rounded-full flex items-center justify-center shadow-[0_0_0_4px_rgba(0,0,0,1)] group-hover:scale-110 transition-transform">
@@ -146,7 +138,7 @@ const Moments = () => {
                 <img
                   alt="Group of friends celebrating at a party"
                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  src={moki2}
+                  src={momentsImages.moki2}
                 />
                 {/* <div class="absolute inset-0 flex items-center justify-center">
                   <div class="w-16 h-16 bg-primary/90 border-2 border-white rounded-full flex items-center justify-center shadow-[0_0_0_4px_rgba(0,0,0,1)] group-hover:scale-110 transition-transform">
@@ -169,7 +161,7 @@ const Moments = () => {
                 <img
                   alt="Funny moment with face paint"
                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105  hover:grayscale-0"
-                  src={hoixuan}
+                  src={momentsImages.hoixuan}
                 />
                 <div class="absolute bottom-2 left-2 comic-caption px-2 py-1 rotate-1">
                   <span class="text-xs font-bold text-white">
@@ -185,7 +177,7 @@ const Moments = () => {
                 <img
                   alt="Family trip at the beach"
                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  src={sua}
+                  src={momentsImages.sua}
                 />
                 <div class="absolute top-2 right-2 bg-white border-2 border-black px-2 text-[10px] font-mono">
                   Sữa dâu
@@ -199,7 +191,7 @@ const Moments = () => {
                 <img
                   alt="Road trip adventure video cover"
                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  src={bun}
+                  src={momentsImages.bun}
                 />
                 <div class="absolute bottom-0 right-0 bg-primary text-white border-t-2 border-l-2 border-black px-3 py-1">
                   <span class="font-comic font-bold text-sm">Down mood</span>
@@ -214,7 +206,7 @@ const Moments = () => {
                 <img
                   alt="Childhood photo playing in the garden"
                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  src={caulong1}
+                  src={momentsImages.caulong1}
                 />
                 <div class="absolute inset-0 bg-primary/20 mix-blend-multiply group-hover:bg-transparent transition-colors"></div>
                 <div class="absolute bottom-4 right-4 bg-white border-2 border-black rounded-full px-3 py-1 -rotate-6">
@@ -230,7 +222,7 @@ const Moments = () => {
                 <img
                   alt="Graduation ceremony photo"
                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 filter sepia-[.3] group-hover:sepia-0"
-                  src={chelien}
+                  src={momentsImages.chelien}
                 />
                 <div class="absolute top-4 left-4 bg-white border-2 border-black p-2 rotate-2 shadow-sm">
                   <p class="font-comic font-bold text-xs uppercase">Chè liên</p>
@@ -253,7 +245,7 @@ const Moments = () => {
                 <img
                   alt="Group of friends celebrating at a party"
                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  src={phim}
+                  src={momentsImages.phim}
                 />
                 {/* <div class="absolute inset-0 flex items-center justify-center">
                   <div class="w-16 h-16 bg-primary/90 border-2 border-white rounded-full flex items-center justify-center shadow-[0_0_0_4px_rgba(0,0,0,1)] group-hover:scale-110 transition-transform">
@@ -270,6 +262,58 @@ const Moments = () => {
                 </div>
               </div>
             </div>
+            <div class="col-span-1 md:col-span-2 md:row-span-1 relative group cursor-pointer">
+              <div class="absolute inset-0 border-[6px] border-black z-10 pointer-events-none"></div>
+              <div class="w-full h-full overflow-hidden bg-black relative">
+                <img
+                  alt="Funny moment with face paint"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105  hover:grayscale-0"
+                  src={momentsImages.nhau}
+                />
+                <div class="absolute bottom-2 left-2 comic-caption px-2 py-1 rotate-1">
+                  <span class="text-xs font-bold text-white">
+                    Hôm này sa đoạ dữ :{"))"}
+                  </span>
+                  <p class="text-xs font-mono mt-1 text-white">17.12.2025</p>
+                </div>
+              </div>
+            </div>
+
+            {/* <div class="col-span-1 md:col-span-4 md:row-span-1 relative group cursor-pointer h-72">
+            
+              <div class="absolute inset-0 border-[6px] border-black z-10 pointer-events-none"></div>
+              <div class="absolute -bottom-4 -left-2 z-30">
+                <span class="material-symbols-outlined text-green-700 text-4xl drop-shadow-[2px_2px_0_#000]">
+                  grass
+                </span>
+                <span class="material-symbols-outlined text-red-600 text-xl absolute top-1 left-3 drop-shadow-[1px_1px_0_#000]">
+                  circle
+                </span>
+              </div>
+              <div class="w-full h-full overflow-hidden bg-black relative">
+                <video
+                  src={karaoke}
+                  className="w-full h-full object-cover"
+                  muted
+                  loop
+                  playsInline
+                  controls
+                />
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <div class="w-16 h-16 bg-primary/90 border-2 border-white rounded-full flex items-center justify-center shadow-[0_0_0_4px_rgba(0,0,0,1)] group-hover:scale-110 transition-transform">
+                    <span class="material-symbols-outlined filled text-white text-3xl">
+                      play_arrow
+                    </span>
+                  </div>
+                </div>
+                <div class="absolute top-0 left-0 bg-yellow-300 border-b-2 border-r-2 border-black px-4 py-1">
+                  <p class="font-comic font-black uppercase tracking-widest text-sm">
+                    Action!
+                  </p>
+                </div>
+              </div>
+            </div> */}
+            <VideoBlock karaoke={moingon}></VideoBlock>
           </div>
         </div>
         <div class="flex justify-end mt-2">
