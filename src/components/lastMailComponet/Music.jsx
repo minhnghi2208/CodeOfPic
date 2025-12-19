@@ -97,10 +97,11 @@ const Music = () => {
                   <h2 className="text-3xl md:text-5xl font-black text-white">
                     Our beloved winter!
                   </h2>
-                  <p className="text-lg font-bold text-white">
-                    Khoa sáng tác mong Nhi thấy hay
+                  <p className="text-lg font-bold text-white">Tác giả: @Khle</p>
+                  <p className="text-sm font-bold text-white">
+                    Trong lúc làm web này thì khoa có fill ra bài này mong Nhi
+                    thấy hay
                   </p>
-                  <p className="text-lg font-bold text-white">Khle</p>
                 </div>
 
                 {/* PROGRESS */}
