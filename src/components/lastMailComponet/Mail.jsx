@@ -80,7 +80,9 @@ const Mail = () => {
                       }
                       className="group flex items-center gap-2 text-primary hover:text-primary-dark font-bold text-lg transition-colors"
                     >
-                      Tiếp theo
+                      {index === message.length - 1
+                        ? "Quay lại từ đầu"
+                        : "Tiếp theo"}
                       <span className="material-symbols-outlined text-2xl transition-transform group-hover:translate-x-1 group-hover:scale-110">
                         arrow_right_alt
                       </span>
