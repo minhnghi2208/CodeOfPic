@@ -97,7 +97,9 @@ const Music = () => {
                   <h2 className="text-3xl md:text-5xl font-black text-white">
                     Our beloved winter!
                   </h2>
-                  <p className="text-lg font-bold text-white">Nhớ Nhi nên fill ra đoá</p>
+                  <p className="text-lg font-bold text-white">
+                    Khoa sáng tác mong Nhi thấy hay
+                  </p>
                   <p className="text-lg font-bold text-white">Khle</p>
                 </div>
 
