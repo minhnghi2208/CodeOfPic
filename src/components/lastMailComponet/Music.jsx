@@ -95,8 +95,9 @@ const Music = () => {
               <div className="flex flex-col w-full gap-6">
                 <div className="text-center md:text-left">
                   <h2 className="text-3xl md:text-5xl font-black text-white">
-                    Những vì tinh tú trong mắt em!
+                    Our beloved winter!
                   </h2>
+                  <p className="text-lg font-bold text-white">Nhớ Nhi nên fill ra đoá</p>
                   <p className="text-lg font-bold text-white">Khle</p>
                 </div>
 

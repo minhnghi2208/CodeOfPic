@@ -1,5 +1,5 @@
 import mainpic from "../../assets/pic/main.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 const Content1 = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -22,6 +22,10 @@ const Content1 = () => {
     setPopupMessage(`${choice}`);
     setShowPopup(false);
   };
+
+  useEffect(() => {
+    document.body.style.overflow = popupMessage ? "hidden" : "auto";
+  }, [popupMessage]);
   return (
     <>
       <div class="layout-container flex w-full grow flex-col py-8 md:py-16 px-4 md:px-10">
