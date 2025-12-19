@@ -10,6 +10,7 @@ import hoixuan from "../../assets/momentsPic/hoixuan.jpg";
 import bun from "../../assets/pic/bun.jpg";
 import phim from "../../assets/momentsPic/phim.jpg";
 import nhau from "../../assets/momentsPic/nhau.jpg";
+import outro from "../../assets/momentsPic/outro.jpg";
 export const momentsImages = {
   caulong1,
   banh,
@@ -23,4 +24,5 @@ export const momentsImages = {
   bun,
   phim,
   nhau,
+  outro,
 };

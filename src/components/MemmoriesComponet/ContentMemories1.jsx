@@ -169,10 +169,13 @@ const ContentMemories1 = () => {
                     <div class="absolute -bottom-[6px] left-[26px] w-0 h-0 border-l-[8px] border-l-transparent border-t-[8px] border-t-white border-r-[8px] border-r-transparent"></div>
                   </div>
                   <p class="text-right text-gray-500 text-lg mt-2 font-bold">
-                    - - Khle - -
+                    {`${currentIndex + 1}/${MyStory.length} `}
                   </p>
                 </div>
-                <div class="mt-8 pt-6 border-t-2 border-dashed border-gray-300 flex items-center justify-between">
+                <div class="mt-8 pt-6 border-t-2 border-dashed border-gray-300 flex items-center justify-end">
+                  <p class="text-right text-gray-500 text-lg mt-2 font-bold">
+                    - - Khle - -
+                  </p>
                   {/* <div class="flex items-center gap-2">
                     <div class="flex -space-x-3">
                       <div
@@ -206,8 +209,13 @@ const ContentMemories1 = () => {
           </div>
           <div class="flex justify-between items-center mt-8 px-2 py-5">
             <button
+              disabled={currentIndex === 0}
               onClick={handlePrev}
-              class="flex items-center gap-2 px-6 py-2 rounded-xl bg-white border-2 border-ink shadow-comic hover:translate-y-[2px] hover:shadow-comic-hover transition-all group font-bold text-lg"
+              class={`flex items-center gap-2 px-6 py-2 rounded-xl bg-white border-2 border-ink shadow-comic hover:translate-y-[2px] hover:shadow-comic-hover transition-all group font-bold text-lg ${
+                currentIndex === 0
+                  ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+                  : "bg-white text-black hover:translate-y-[2px] hover:shadow-comic-hover"
+              }`}
             >
               <span class="material-symbols-outlined group-hover:-translate-x-1 transition-transform">
                 arrow_back
@@ -218,8 +226,15 @@ const ContentMemories1 = () => {
               Sử dụng phím mũi tên để điều hướng
             </span>
             <button
+              disabled={currentIndex === MyStory.length - 1}
               onClick={handleNext}
-              class="flex items-center gap-2 px-6 py-2 rounded-xl bg-primary text-white border-2 border-ink shadow-comic hover:translate-y-[2px] hover:shadow-comic-hover transition-all group font-bold text-lg"
+              className={`flex items-center gap-2 px-6 py-2 rounded-xl border-2 border-ink shadow-comic transition-all group font-bold text-lg
+    ${
+      currentIndex === MyStory.length - 1
+        ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+        : "bg-primary text-white hover:translate-y-[2px] hover:shadow-comic-hover"
+    }
+  `}
             >
               <span>Tiếp theo</span>
               <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">

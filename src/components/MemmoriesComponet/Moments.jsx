@@ -453,6 +453,32 @@ const Moments = () => {
               </div>
             </div> */}
             <VideoBlock karaoke={moingon}></VideoBlock>
+
+            <div
+              onClick={() =>
+                setSelectedMoment({
+                  title: "Coming soon <3",
+                  date: "--.--.----",
+                  image: momentsImages.outro,
+                  description:
+                    "Mong chúng mình có thể cùng nhau có thêm nhiều khoảnh khắc hơn trong tương lai nè. ",
+                })
+              }
+              class="col-span-1 md:col-span-2 md:row-span-1 relative group cursor-pointer"
+            >
+              <div class="absolute inset-0 border-[6px] border-black z-10 pointer-events-none"></div>
+              <div class="w-full h-full overflow-hidden bg-black relative">
+                <img
+                  alt="Family trip at the beach"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  src={momentsImages.outro}
+                />
+                <div class="absolute top-2 right-2 bg-white border-2 border-black px-2 text-[10px] font-mono">
+                  Unlock vào 1 ngày k xa
+                  <p class="text-xs font-mono mt-1">--.--.----</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="flex justify-end mt-2">
