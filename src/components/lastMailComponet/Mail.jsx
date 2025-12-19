@@ -7,10 +7,10 @@ const Mail = () => {
       abc: "đây là lá thư cuối cùng của ngày, trước khi quen Nhi thì mỗi ngày của khoa trôi qua khá bình thường không có gì đặc biệt và ngày qua ngày vẫn vậy, từ khi Nhi đến thì mỗi ngày của trở nên đặc biệt hơn. Khoa không cần phải làm gì đó 1 mình nữa, có người để nhắn tin, chia sẻ và thật sự rất vui.",
     },
     {
-      abc: "Hôm nay là giáng sinh đầu tiên mà mình bên nhau và khoa cũng mong Nhi có nhiều hơn những mùa giáng sinh vui vẻ và tất nhiên là cùng khoa hehe. Có lẽ Khoa thích Nhi từ nhiều thứ hiện diện thuộc về Nhi nhưng ...",
+      abc: "Lúc Nhi đang đọc lá thư này thì hôm nay là giáng sinh đầu tiên mà mình bên nhau và khoa cũng mong Nhi có nhiều hơn những mùa giáng sinh vui vẻ và tất nhiên là cùng khoa hehe. Có lẽ Khoa thích Nhi từ nhiều thứ hiện diện thuộc về Nhi nhưng ...",
     },
     {
-      abc: "có thể Nhi cũng đã nghe khoa nói khoa thích nhất ở Nhi là đôi mắt, nên khoa mong đôi mắt đó sẽ luôn có khoa trong và không khóc nhè nữa nha. Đây là những gì khoa đã chuẩn bị bằng tất cả tình iu của Khoa có thể chưa được hoàn hảo nhất nhưng mong là khiến Nhi vui và thích khoa hơn. Cảm ơn Nhi đã cho Khoa cơ hội để được ở bên Nhi nè. Luv U !",
+      abc: "có thể Nhi cũng đã nghe khoa nói khoa thích nhất ở Nhi là đôi mắt, nên khoa mong đôi mắt đó sẽ luôn có khoa trong và không khóc nhè nữa nha. Đây là những gì khoa đã chuẩn bị và nghĩ ra có thể vì khoa cũng giỏi trong việc ăn nói nhưng mong là những thứ Nhi đang thấy sẽ khiến Nhi vui và thích khoa hơn. Cảm ơn Nhi đã cho Khoa cơ hội để được ở bên Nhi nè. Luv U !",
     },
   ];
 
