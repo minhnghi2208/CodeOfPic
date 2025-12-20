@@ -98,10 +98,10 @@ const Music = () => {
                     Our beloved winter!
                   </h2>
                   <p className="text-lg font-bold text-white">Tác giả: @Khle</p>
-                  <p className="text-sm font-bold text-white">
+                  {/* <p className="text-sm font-bold text-white">
                     Trong lúc làm web này thì khoa có fill ra bài này mong Nhi
                     thấy hay
-                  </p>
+                  </p> */}
                 </div>
 
                 {/* PROGRESS */}

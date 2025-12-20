@@ -10,7 +10,7 @@ const Mail = () => {
       abc: "Lúc Nhi đang đọc lá thư này thì hôm nay là giáng sinh đầu tiên mà mình bên nhau và khoa cũng mong Nhi có nhiều hơn những mùa giáng sinh vui vẻ và tất nhiên là cùng khoa hehe. Có lẽ Khoa thích Nhi từ nhiều thứ hiện diện thuộc về Nhi nhưng ...",
     },
     {
-      abc: "có thể Nhi cũng đã nghe khoa nói khoa thích nhất ở Nhi là đôi mắt, nên khoa mong đôi mắt đó sẽ luôn có khoa trong đó và không khóc nhè nữa nha. Đây là những gì khoa đã chuẩn bị và nghĩ ra. Có thể vì khoa cũng giỏi trong việc ăn nói nhưng mong là những thứ Nhi đang thấy sẽ khiến Nhi vui và thích khoa hơn. Cảm ơn Nhi đã cho Khoa cơ hội để được ở bên Nhi nè. Luv U !",
+      abc: "có thể Nhi cũng đã nghe khoa nói khoa thích nhất ở Nhi là đôi mắt, nên khoa mong đôi mắt đó sẽ luôn có khoa trong đó và không khóc nhè nữa nha. Đây là những gì khoa đã chuẩn bị và nghĩ ra. Có thể vì khoa cũng giỏi trong việc ăn nói nhưng mong là những thứ Khoa làm và Nhi đang thấy sẽ khiến Nhi vui và thích khoa hơn. Cảm ơn Nhi đã cho Khoa cơ hội để được ở bên Nhi nè. Luv U !",
     },
   ];
 
