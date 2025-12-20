@@ -503,7 +503,7 @@ const Moments = () => {
             {/* ❌ Close */}
             <button
               onClick={() => setSelectedMoment(null)}
-              class="absolute -top-6 -right-6 z-40 bg-primary text-white border-2 border-black rounded-full w-12 h-12 flex items-center justify-center"
+              class="absolute z-40 top-2 right-2 md:-top-6 md:-right-6 bg-primary text-white border-2 border-black rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center"
             >
               <span class="material-symbols-outlined text-2xl">close</span>
             </button>
