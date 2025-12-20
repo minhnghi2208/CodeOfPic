@@ -59,7 +59,7 @@ const VideoBlock = ({ karaoke }) => {
         {/* Label */}
         <div className="absolute top-0 left-0 bg-yellow-300 border-b-2 border-r-2 border-black px-4 py-1 pointer-events-none">
           <p className="font-comic font-black uppercase tracking-widest text-sm">
-            Action!
+            Quậy!
           </p>
           <p class="text-xs font-mono mt-1">18.12.2025</p>
         </div>

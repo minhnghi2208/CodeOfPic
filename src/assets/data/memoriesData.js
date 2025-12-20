@@ -7,9 +7,9 @@ export const MyStory = [
     pictureTitle: "Đây là hôm đi HiChi đầu tiên",
     title: "Ngày gặp gỡ",
     message1:
-      "Thật ra hôm đó cũng chẳng phải ngày mà mình gặp nhau đầu tiên, trước đó Khoa đã gặp Nhi 2 lần..., một lần tụi mình ăn Moki cùng nhau 😏. Nhưng có lẽ nhớ nhất thì chắc hôm đầu tiên chúng mình tình cờ gặp nhau ở Trần Hưng Đạo 2 đứa nhìn nhau và cười :))",
+      "Thật ra hôm đó cũng chẳng phải ngày mà mình gặp nhau đầu tiên, trước đó Khoa đã gặp Nhi 3 lần..., một lần tụi mình ăn Moki cùng nhau 😏, sau đó lần đầu tiên ở Đà Nẵng vô tình gặp nhau ngoài đường và nhìn nhau cười, và ngày 23/08/2024 ở phố đi bộ Bạch Đằng là ngày Khoa để ý Nhi.",
     message2:
-      "Còn sau hôm đi HiChi này thì khoa đã để ý đến Nhi, xem tất cả trang social, story, ghi chú bla bla, biết được nhiều hơn về Nhi.",
+      "Còn sau hôm đi HiChi này thì khoa đã để thích Nhi rồi, xem tất cả trang social, story, ghi chú bla bla, biết được nhiều hơn về Nhi.",
     conclusion: "Ngày này là ngày mà Khoa thích Nhi nè",
     date: "12/09/2025",
   },
