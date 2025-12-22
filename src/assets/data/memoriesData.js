@@ -1,6 +1,7 @@
 import HiChi from "../pic/HiChi.jpg";
 import bun from "../pic/bun.jpg";
 import pic1 from "../pic/pic1.jpg";
+import lock from "../pic/lock.jpg";
 export const MyStory = [
   {
     picture: HiChi,
@@ -29,10 +30,22 @@ export const MyStory = [
     pictureTitle: "Hiện tại",
     title: "In Love",
     message1:
-      "Lúc này Khoa cũng không biết nữa vì những gì Nhi đang đọc thì Khoa đã chuẩn bị trước đó cũng khá lâu, nên cũng không biết lúc Nhi đọc được thì tụi mình đã in love chưa nữa",
+      "Lúc này Khoa cũng không biết nữa vì những gì Nhi đang đọc thì Khoa đã chuẩn bị trước đó cũng khá lâu, nên cũng không biết lúc Nhi đọc được thì tụi mình đã in love chưa nữa.",
     message2:
-      "Nhưng mà nếu Nhi đọc được những cái này thì khả năng tụi mình cũng chính thức quen nhau rùi nè",
+      "Nhưng mà nếu Nhi đọc được những cái này thì khả năng tụi mình cũng chính thức quen nhau rùi nè.",
     conclusion: "Hope so, hy zọng em gái trong ảnh sẽ thành ngiu mình hẹ hẹ",
     date: "25/12/2025",
+  },
+
+  {
+    picture: lock,
+    pictureTitle: "Tương lai",
+    title: "Tương lai của chúng mình",
+    message1:
+      "Thực ra cũng không biết chúng mình tương lai sẽ ra sao nhưng Khoa mong mọi khoảnh khắc, mọi phút giây của Khoa luôn có Nhi.",
+    message2:
+      "Lá thư này có thể không chỉ giành cho Nhi mà còn cả cho Khoa nữa, hy vọng rằng một ngày nào đó khi đọc lại những bức thư mà Khoa đã viết này thì chúng mình vẫn bênh nhau nè.",
+    conclusion: "The future is coming soon!",
+    date: "--/--/----",
   },
 ];
