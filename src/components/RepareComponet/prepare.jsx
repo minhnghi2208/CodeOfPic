@@ -3,7 +3,11 @@ import Footer from "../Layout/Footer";
 import CardPrepare from "./CardPrepare";
 import noelbg from "../../assets/pic/noelbg.png";
 import { MyPrepareStory } from "../../assets/data/prepareData";
+import { useEffect } from "react";
 const Prepare = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <>
       <Header></Header>
