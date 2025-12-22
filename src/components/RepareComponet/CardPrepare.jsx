@@ -1,8 +1,10 @@
+import { useState } from "react";
 const CardPrepare = ({ title, picture, decription, date }) => {
+  const [selectedPrepare, setSelectedPrepare] = useState(null);
   return (
     <>
       <article class="group relative flex flex-col h-full bg-white dark:bg-[#1f1212] rounded-xl border-2 border-black dark:border-white shadow-comic hover:shadow-comic-hover hover:-translate-y-2 transition-all duration-300 overflow-hidden">
-        <div class="relative w-full aspect-video overflow-hidden border-b-2 border-black dark:border-white">
+        <div class="relative w-full aspect-[5/3] overflow-hidden border-b-2 border-black dark:border-white">
           <div
             class="absolute top-0 left-0 w-full h-full bg-center bg-cover transition-transform duration-700 group-hover:scale-110"
             data-alt="Making gingerbread cookies in kitchen"
@@ -35,15 +37,65 @@ const CardPrepare = ({ title, picture, decription, date }) => {
                 🎄
               </div>
             </div>
-            {/* <button class="text-sm font-bold text-primary flex items-center group/btn">
+            <button
+              onClick={() =>
+                setSelectedPrepare({
+                  title: title,
+                  date: date,
+                  image: picture,
+                  description: decription,
+                })
+              }
+              class="text-sm font-bold text-primary flex items-center group/btn"
+            >
               Xem chi tiết
               <span class="material-symbols-outlined text-base ml-1 transition-transform group-hover/btn:translate-x-1">
                 arrow_forward
               </span>
-            </button> */}
+            </button>
           </div>
         </div>
       </article>
+
+      {selectedPrepare && (
+        <div class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center">
+          <div class="modal-content-wrapper relative w-full max-w-4xl">
+            {/* ❌ Close */}
+            <button
+              onClick={() => setSelectedPrepare(null)}
+              class="absolute z-40 top-2 right-2 md:-top-6 md:-right-6 bg-primary text-white border-2 border-black rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center"
+            >
+              <span class="material-symbols-outlined text-2xl">close</span>
+            </button>
+
+            <div class="comic-border bg-white p-6 shadow-[10px_10px_0_0_rgba(0,0,0,0.5)]">
+              <div class="flex flex-col md:flex-row gap-6">
+                {/* IMAGE */}
+                <div class="md:w-1/2">
+                  <img
+                    src={selectedPrepare.image}
+                    class="w-full h-auto border-2 border-black"
+                  />
+                </div>
+
+                {/* CONTENT */}
+                <div class="md:w-1/2 font-comic">
+                  <h2 class="text-3xl font-black mb-2">
+                    {selectedPrepare.title}
+                  </h2>
+                  <p class="text-sm text-gray-500 mb-4">
+                    {selectedPrepare.date}
+                  </p>
+                  <p class="text-lg">{selectedPrepare.description}</p>
+                </div>
+              </div>
+              <p class="text-right text-gray-500 text-lg mt-2 font-bold">
+                - - Khle - -
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };

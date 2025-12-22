@@ -68,7 +68,7 @@ const Prepare = () => {
                     Chap 12
                   </p>
                   <p class="font-bold text-sm leading-tight">
-                    "Tháng 12 của những điều kỳ diệu!"
+                    "Tháng 12 của anh và em!"
                   </p>
                 </div>
               </div>
@@ -125,9 +125,7 @@ const Prepare = () => {
 
         <div class="w-full max-w-[1200px] px-4 py-8 pb-20">
           <div class="flex items-center gap-3 mb-8">
-            <h2 class="text-3xl font-black tracking-tight">
-              Tháng 12 Đáng Nhớ
-            </h2>
+            <h2 class="text-3xl font-black tracking-tight">Tháng 12</h2>
             <span class="flex-1 h-[2px] bg-gray-200 dark:bg-white/10 rounded-full"></span>
             <span class="material-symbols-outlined text-primary animate-bounce">
               ac_unit
@@ -144,7 +142,7 @@ const Prepare = () => {
               ></CardPrepare>
             ))}
 
-            <article class="group relative flex flex-col justify-center items-center h-full min-h-[300px] bg-gray-100 dark:bg-[#2a2a2a] rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600 hover:border-primary dark:hover:border-primary transition-all cursor-pointer">
+            {/* <article class="group relative flex flex-col justify-center items-center h-full min-h-[300px] bg-gray-100 dark:bg-[#2a2a2a] rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600 hover:border-primary dark:hover:border-primary transition-all cursor-pointer">
               <div class="size-16 rounded-full bg-white dark:bg-[#333] flex items-center justify-center shadow-sm mb-4 group-hover:scale-110 transition-transform">
                 <span class="material-symbols-outlined text-3xl text-primary">
                   edit
@@ -156,10 +154,11 @@ const Prepare = () => {
               <p class="text-sm text-gray-400 dark:text-gray-500 max-w-[200px] text-center">
                 Câu chuyện của ngày hôm nay đang chờ bạn viết nên.
               </p>
-            </article>
+            </article> */}
           </div>
         </div>
       </div>
+
       <Footer></Footer>
     </>
   );

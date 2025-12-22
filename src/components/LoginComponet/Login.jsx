@@ -113,7 +113,7 @@ const Login = () => {
               <div class="relative">
                 <div class="absolute -top-16 -right-10 bg-white dark:bg-[#2a1515] p-3 border-2 border-black rounded-full z-20">
                   <p class="font-black text-xs text-center uppercase">
-                    Ho Ho Ho!
+                    Only for Yến Nhi!
                   </p>
                 </div>
                 <div
@@ -165,7 +165,7 @@ const Login = () => {
                 <div class="mb-8">
                   <div class="inline-block bg-[#f8f5f5] dark:bg-[#3d1f1f] px-3 py-1 rounded-md border-2 border-[#181111] mb-3 transform -rotate-1">
                     <span class="text-primary font-extrabold uppercase text-xs tracking-wider">
-                      Khu vực tuyệt mật
+                      Khu vực tuyệt mật!
                     </span>
                   </div>
                   <h1 class="text-[#181111] dark:text-white text-4xl lg:text-5xl font-black leading-tight tracking-tighter uppercase mb-2 drop-shadow-sm">
