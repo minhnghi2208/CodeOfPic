@@ -1,6 +1,8 @@
 import Header from "../Layout/Header";
 import Footer from "../Layout/Footer";
-
+import CardPrepare from "./CardPrepare";
+import noelbg from "../../assets/pic/noelbg.png";
+import { MyPrepareStory } from "../../assets/data/prepareData";
 const Prepare = () => {
   return (
     <>
@@ -52,8 +54,7 @@ const Prepare = () => {
                 class="relative w-full aspect-[4/3] rounded-[2rem] overflow-hidden border-4 border-black dark:border-white shadow-comic bg-white dark:bg-[#1a0d0d]"
                 data-alt="Illustration of a cozy Christmas room with a fireplace and comic book style elements"
                 style={{
-                  backgroundImage:
-                    'url("https://lh3.googleusercontent.com/aida-public/AB6AXuASnUVGLzvyLIuF4FR-Qr8AGt45Kl1MI7Cr9LpMA82ybX4KUwCp8ftMFnTYmLRCzM5v9wKJgjwCXnFaYxT1YMIM7MLtJaiRFHZJVyinjJtQKnchYjjYC0_GdOtLRtTqImcr5iKmI7FhDl1ufL3-9SLIKKWnJeUbjs7BKGtqSKY1nSLV-I3DeowuVJ4EtvY6AzpcwGDV-r-cUc6WrEEQ0pa9TV5rubi7QjdNS2p5seGh7HlMoab8eQVaxrqFESV3CFBPJHZq5NtIYjc")',
+                  backgroundImage: `url(${noelbg})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
@@ -129,237 +130,15 @@ const Prepare = () => {
             </span>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
-            <article class="group relative flex flex-col h-full bg-white dark:bg-[#1f1212] rounded-xl border-2 border-black dark:border-white shadow-comic hover:shadow-comic-hover hover:-translate-y-2 transition-all duration-300 overflow-hidden">
-              <div class="relative w-full aspect-video overflow-hidden border-b-2 border-black dark:border-white">
-                <div
-                  class="absolute top-0 left-0 w-full h-full bg-center bg-cover transition-transform duration-700 group-hover:scale-110"
-                  data-alt="Decorating Christmas tree with red and gold ornaments"
-                  style={{
-                    backgroundImage:
-                      'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDd64uPK28y6j88bs7xxYKkAlsMNm_m7w4-5k9VGkNZltMxj5t14XZKRbu1DLeDI9F2Z1UVup65iGfWBVJpOukisJfvieIAidWjAlMDQRSO8bBcYtJE6iBMa_eSEPKMy85k0zMtXKzcQ4nFb2sJ59sb-QHGn85jYl4MBZOnxLyNW548syDMOhAu3G7YLuVL1vYWeELnRmxlOUBUM4oEiQOVyp9doBpMDtaxuXMiyf9A-xVrMSVkBOT4vPfsPhkNvbjjNUUb8dQPamI")',
-                  }}
-                ></div>
-
-                <div class="absolute top-3 left-3 bg-comic-yellow text-black border-2 border-black px-3 py-1 font-black text-sm uppercase -rotate-2 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
-                  20 Dec
-                </div>
-              </div>
-              <div class="p-6 flex flex-col flex-1">
-                <div class="flex items-start justify-between mb-3">
-                  <h3 class="text-xl font-bold leading-tight group-hover:text-primary transition-colors">
-                    Chuẩn bị cây thông
-                  </h3>
-                  <span class="material-symbols-outlined text-gray-400 group-hover:text-primary">
-                    forest
-                  </span>
-                </div>
-                <p class="text-gray-600 dark:text-gray-300 font-body text-sm mb-4 line-clamp-3">
-                  Hôm nay cả nhà cùng nhau đi chọn cây thông. Bố vác cây về, còn
-                  mẹ thì tìm lại hộp đồ trang trí cũ. Mình đã treo ngôi sao lên
-                  đỉnh cây!
-                </p>
-                <div class="mt-auto pt-4 border-t border-dashed border-gray-300 dark:border-white/20 flex items-center justify-between">
-                  <div class="flex -space-x-2">
-                    <div class="size-6 rounded-full bg-blue-100 border border-white flex items-center justify-center text-[10px]">
-                      🎄
-                    </div>
-                    <div class="size-6 rounded-full bg-red-100 border border-white flex items-center justify-center text-[10px]">
-                      ❤️
-                    </div>
-                  </div>
-                  <button class="text-sm font-bold text-primary flex items-center group/btn">
-                    Xem chi tiết
-                    <span class="material-symbols-outlined text-base ml-1 transition-transform group-hover/btn:translate-x-1">
-                      arrow_forward
-                    </span>
-                  </button>
-                </div>
-              </div>
-            </article>
-
-            <article class="group relative flex flex-col h-full bg-white dark:bg-[#1f1212] rounded-xl border-2 border-black dark:border-white shadow-comic hover:shadow-comic-hover hover:-translate-y-2 transition-all duration-300 overflow-hidden">
-              <div class="relative w-full aspect-video overflow-hidden border-b-2 border-black dark:border-white">
-                <div
-                  class="absolute top-0 left-0 w-full h-full bg-center bg-cover transition-transform duration-700 group-hover:scale-110"
-                  data-alt="Making gingerbread cookies in kitchen"
-                  style={{
-                    backgroundImage:
-                      'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDd64uPK28y6j88bs7xxYKkAlsMNm_m7w4-5k9VGkNZltMxj5t14XZKRbu1DLeDI9F2Z1UVup65iGfWBVJpOukisJfvieIAidWjAlMDQRSO8bBcYtJE6iBMa_eSEPKMy85k0zMtXKzcQ4nFb2sJ59sb-QHGn85jYl4MBZOnxLyNW548syDMOhAu3G7YLuVL1vYWeELnRmxlOUBUM4oEiQOVyp9doBpMDtaxuXMiyf9A-xVrMSVkBOT4vPfsPhkNvbjjNUUb8dQPamI")',
-                  }}
-                ></div>
-                <div class="absolute top-3 left-3 bg-white text-black border-2 border-black px-3 py-1 font-black text-sm uppercase rotate-1 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
-                  21 Dec
-                </div>
-              </div>
-              <div class="p-6 flex flex-col flex-1">
-                <div class="flex items-start justify-between mb-3">
-                  <h3 class="text-xl font-bold leading-tight group-hover:text-primary transition-colors">
-                    Làm bánh gừng
-                  </h3>
-                  <span class="material-symbols-outlined text-gray-400 group-hover:text-primary">
-                    cookie
-                  </span>
-                </div>
-                <p class="text-gray-600 dark:text-gray-300 font-body text-sm mb-4 line-clamp-3">
-                  Mùi quế và gừng thơm lừng cả căn bếp. Những chiếc bánh hình
-                  người tuyết méo mó nhưng siêu ngon.
-                </p>
-                <div class="mt-auto pt-4 border-t border-dashed border-gray-300 dark:border-white/20 flex items-center justify-between">
-                  <div class="flex -space-x-2">
-                    <div class="size-6 rounded-full bg-yellow-100 border border-white flex items-center justify-center text-[10px]">
-                      🍪
-                    </div>
-                  </div>
-                  <button class="text-sm font-bold text-primary flex items-center group/btn">
-                    Xem chi tiết
-                    <span class="material-symbols-outlined text-base ml-1 transition-transform group-hover/btn:translate-x-1">
-                      arrow_forward
-                    </span>
-                  </button>
-                </div>
-              </div>
-            </article>
-
-            <article class="group relative flex flex-col h-full bg-primary/5 dark:bg-[#2a1515] rounded-xl border-2 border-primary shadow-comic hover:shadow-comic-hover hover:-translate-y-2 transition-all duration-300 overflow-hidden ring-4 ring-primary/10">
-              <div class="absolute -top-2 -right-2 z-10">
-                <span class="material-symbols-outlined text-4xl text-primary drop-shadow-md rotate-12">
-                  cake
-                </span>
-              </div>
-              <div class="relative w-full aspect-video overflow-hidden border-b-2 border-primary">
-                <div
-                  class="absolute top-0 left-0 w-full h-full bg-center bg-cover transition-transform duration-700 group-hover:scale-110"
-                  data-alt="Birthday cake with candles lit up in dark room"
-                  style={{
-                    backgroundImage:
-                      'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDd64uPK28y6j88bs7xxYKkAlsMNm_m7w4-5k9VGkNZltMxj5t14XZKRbu1DLeDI9F2Z1UVup65iGfWBVJpOukisJfvieIAidWjAlMDQRSO8bBcYtJE6iBMa_eSEPKMy85k0zMtXKzcQ4nFb2sJ59sb-QHGn85jYl4MBZOnxLyNW548syDMOhAu3G7YLuVL1vYWeELnRmxlOUBUM4oEiQOVyp9doBpMDtaxuXMiyf9A-xVrMSVkBOT4vPfsPhkNvbjjNUUb8dQPamI")',
-                  }}
-                ></div>
-                <div class="absolute top-3 left-3 bg-primary text-white border-2 border-white px-3 py-1 font-black text-sm uppercase -rotate-3 shadow-md">
-                  22 Dec
-                </div>
-              </div>
-              <div class="p-6 flex flex-col flex-1">
-                <div class="flex items-start justify-between mb-3">
-                  <h3 class="text-xl font-bold leading-tight text-primary">
-                    Sinh nhật sớm!
-                  </h3>
-                </div>
-                <p class="text-gray-600 dark:text-gray-300 font-body text-sm mb-4 line-clamp-3">
-                  Một bữa tiệc bất ngờ từ những người bạn thân. Cảm ơn mọi người
-                  vì chiếc bánh kem tuyệt vời và những lời chúc ấm áp. Tuổi mới
-                  rực rỡ!
-                </p>
-                <div class="mt-auto pt-4 border-t border-dashed border-primary/30 flex items-center justify-between">
-                  <div class="flex -space-x-2">
-                    <div class="size-6 rounded-full bg-purple-100 border border-white flex items-center justify-center text-[10px]">
-                      🎂
-                    </div>
-                    <div class="size-6 rounded-full bg-pink-100 border border-white flex items-center justify-center text-[10px]">
-                      🎉
-                    </div>
-                    <div class="size-6 rounded-full bg-blue-100 border border-white flex items-center justify-center text-[10px]">
-                      🎁
-                    </div>
-                  </div>
-                  <button class="text-sm font-bold text-primary flex items-center group/btn">
-                    Xem chi tiết
-                    <span class="material-symbols-outlined text-base ml-1 transition-transform group-hover/btn:translate-x-1">
-                      arrow_forward
-                    </span>
-                  </button>
-                </div>
-              </div>
-            </article>
-
-            <article class="group relative flex flex-col h-full bg-white dark:bg-[#1f1212] rounded-xl border-2 border-black dark:border-white shadow-comic hover:shadow-comic-hover hover:-translate-y-2 transition-all duration-300 overflow-hidden">
-              <div class="relative w-full aspect-video overflow-hidden border-b-2 border-black dark:border-white">
-                <div
-                  class="absolute top-0 left-0 w-full h-full bg-center bg-cover transition-transform duration-700 group-hover:scale-110"
-                  data-alt="Pile of wrapped colorful Christmas gifts"
-                  style={{
-                    backgroundImage:
-                      'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDd64uPK28y6j88bs7xxYKkAlsMNm_m7w4-5k9VGkNZltMxj5t14XZKRbu1DLeDI9F2Z1UVup65iGfWBVJpOukisJfvieIAidWjAlMDQRSO8bBcYtJE6iBMa_eSEPKMy85k0zMtXKzcQ4nFb2sJ59sb-QHGn85jYl4MBZOnxLyNW548syDMOhAu3G7YLuVL1vYWeELnRmxlOUBUM4oEiQOVyp9doBpMDtaxuXMiyf9A-xVrMSVkBOT4vPfsPhkNvbjjNUUb8dQPamI")',
-                  }}
-                ></div>
-                <div class="absolute top-3 left-3 bg-white text-black border-2 border-black px-3 py-1 font-black text-sm uppercase rotate-2 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
-                  23 Dec
-                </div>
-              </div>
-              <div class="p-6 flex flex-col flex-1">
-                <div class="flex items-start justify-between mb-3">
-                  <h3 class="text-xl font-bold leading-tight group-hover:text-primary transition-colors">
-                    Gói ghém yêu thương
-                  </h3>
-                  <span class="material-symbols-outlined text-gray-400 group-hover:text-primary">
-                    card_giftcard
-                  </span>
-                </div>
-                <p class="text-gray-600 dark:text-gray-300 font-body text-sm mb-4 line-clamp-3">
-                  Ngồi tỉ mẩn gói từng món quà nhỏ cho bạn bè. Hy vọng mọi người
-                  sẽ thích những món quà handmade này.
-                </p>
-                <div class="mt-auto pt-4 border-t border-dashed border-gray-300 dark:border-white/20 flex items-center justify-between">
-                  <div class="flex -space-x-2">
-                    <div class="size-6 rounded-full bg-green-100 border border-white flex items-center justify-center text-[10px]">
-                      🎀
-                    </div>
-                  </div>
-                  <button class="text-sm font-bold text-primary flex items-center group/btn">
-                    Xem chi tiết
-                    <span class="material-symbols-outlined text-base ml-1 transition-transform group-hover/btn:translate-x-1">
-                      arrow_forward
-                    </span>
-                  </button>
-                </div>
-              </div>
-            </article>
-
-            <article class="group relative flex flex-col h-full bg-white dark:bg-[#1f1212] rounded-xl border-2 border-black dark:border-white shadow-comic hover:shadow-comic-hover hover:-translate-y-2 transition-all duration-300 overflow-hidden">
-              <div class="relative w-full aspect-video overflow-hidden border-b-2 border-black dark:border-white">
-                <div
-                  class="absolute top-0 left-0 w-full h-full bg-center bg-cover transition-transform duration-700 group-hover:scale-110"
-                  data-alt="Cozy dinner table set for Christmas eve"
-                  style={{
-                    backgroundImage:
-                      'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDd64uPK28y6j88bs7xxYKkAlsMNm_m7w4-5k9VGkNZltMxj5t14XZKRbu1DLeDI9F2Z1UVup65iGfWBVJpOukisJfvieIAidWjAlMDQRSO8bBcYtJE6iBMa_eSEPKMy85k0zMtXKzcQ4nFb2sJ59sb-QHGn85jYl4MBZOnxLyNW548syDMOhAu3G7YLuVL1vYWeELnRmxlOUBUM4oEiQOVyp9doBpMDtaxuXMiyf9A-xVrMSVkBOT4vPfsPhkNvbjjNUUb8dQPamI")',
-                  }}
-                ></div>
-                <div class="absolute top-3 left-3 bg-primary text-white border-2 border-white px-3 py-1 font-black text-sm uppercase -rotate-1 shadow-md">
-                  24 Dec
-                </div>
-              </div>
-              <div class="p-6 flex flex-col flex-1">
-                <div class="flex items-start justify-between mb-3">
-                  <h3 class="text-xl font-bold leading-tight group-hover:text-primary transition-colors">
-                    Đêm Bình An
-                  </h3>
-                  <span class="material-symbols-outlined text-gray-400 group-hover:text-primary">
-                    restaurant
-                  </span>
-                </div>
-                <p class="text-gray-600 dark:text-gray-300 font-body text-sm mb-4 line-clamp-3">
-                  Bữa tối ấm cúng bên gia đình. Mọi người cùng nâng ly chúc mừng
-                  Giáng Sinh an lành.
-                </p>
-                <div class="mt-auto pt-4 border-t border-dashed border-gray-300 dark:border-white/20 flex items-center justify-between">
-                  <div class="flex -space-x-2">
-                    <div class="size-6 rounded-full bg-red-100 border border-white flex items-center justify-center text-[10px]">
-                      🍷
-                    </div>
-                    <div class="size-6 rounded-full bg-orange-100 border border-white flex items-center justify-center text-[10px]">
-                      🍗
-                    </div>
-                  </div>
-                  <button class="text-sm font-bold text-primary flex items-center group/btn">
-                    Xem chi tiết
-                    <span class="material-symbols-outlined text-base ml-1 transition-transform group-hover/btn:translate-x-1">
-                      arrow_forward
-                    </span>
-                  </button>
-                </div>
-              </div>
-            </article>
+            {MyPrepareStory.map((prepareStory, idx) => (
+              <CardPrepare
+                date={prepareStory.date}
+                picture={prepareStory.picture}
+                title={prepareStory.title}
+                decription={prepareStory.decription}
+                key={idx}
+              ></CardPrepare>
+            ))}
 
             <article class="group relative flex flex-col justify-center items-center h-full min-h-[300px] bg-gray-100 dark:bg-[#2a2a2a] rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600 hover:border-primary dark:hover:border-primary transition-all cursor-pointer">
               <div class="size-16 rounded-full bg-white dark:bg-[#333] flex items-center justify-center shadow-sm mb-4 group-hover:scale-110 transition-transform">
