@@ -9,7 +9,7 @@ import Home from "./components/HomeComponent/Home";
 import Memories from "./components/MemmoriesComponet/Memories";
 import LastMail from "./components/lastMailComponet/LastMail";
 import Login from "./components/LoginComponet/Login";
-import Prepare from "./components/RepareComponet/Prepare";
+import Prepare from "./components/RepareComponet/prepare";
 export default function App() {
   return (
     <Router>
