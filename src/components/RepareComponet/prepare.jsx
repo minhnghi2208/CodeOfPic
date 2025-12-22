@@ -11,7 +11,7 @@ const Prepare = () => {
   return (
     <>
       <Header></Header>
-      <div class="flex-1 flex flex-col items-center w-full">
+      <div className="flex-1 flex flex-col items-center w-full overflow-x-hidden">
         <div class="w-full max-w-[1200px] px-4 py-8 lg:py-12">
           <div class="flex flex-col-reverse lg:flex-row gap-8 lg:gap-16 items-center">
             <div class="flex flex-col gap-6 flex-1 text-center lg:text-left">
