@@ -2,10 +2,11 @@ import pic1 from "../../assets/pic/pic1.jpg";
 import pic2 from "../../assets/pic/pic2.jpg";
 import pic3 from "../../assets/pic/pic3.jpg";
 import pic4 from "../../assets/pic/pic4.jpg";
-import pic5 from "../../assets/pic/pic5.jpg";
+// import pic5 from "../../assets/pic/pic5.jpg";
 import pic8 from "../../assets/pic/pic8.jpg";
 import pic11 from "../../assets/pic/pic11.jpg";
 import pic10 from "../../assets/pic/pic10.jpg";
+import anh13 from "../../assets/pic/anh13.jpg";
 
 const Content3 = () => {
   return (
@@ -14,9 +15,7 @@ const Content3 = () => {
         <div class="flex justify-center w-full px-4">
           <div class="flex flex-col items-center gap-4 text-center max-w-[720px] mb-12">
             <div class="inline-block bg-christmas-red text-white px-4 py-1 border-2 border-ink shadow-comic-sm transform rotate-2">
-              <span class="font-comic text-lg tracking-wider">
-                Photo
-              </span>
+              <span class="font-comic text-lg tracking-wider">Photo</span>
             </div>
             <h2 class="text-5xl py-2 md:text-6xl font-comic text-ink drop-shadow-[2px_2px_0px_rgba(0,0,0,0.2)]">
               Sao mà xinh z???
@@ -111,7 +110,7 @@ const Content3 = () => {
                   <div
                     className="w-full h-full bg-cover bg-center border border-ink"
                     style={{
-                      backgroundImage: `url(${pic5})`,
+                      backgroundImage: `url(${pic11})`,
                     }}
                   />
                 </div>
@@ -120,7 +119,7 @@ const Content3 = () => {
                   <div
                     className="w-full h-full bg-cover bg-center border border-ink"
                     style={{
-                      backgroundImage: `url(${pic11})`,
+                      backgroundImage: `url(${anh13})`,
                     }}
                   />
                 </div>

@@ -1,4 +1,5 @@
 import mainpic from "../../assets/pic/main.png";
+
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 const Content1 = () => {
@@ -44,7 +45,7 @@ const Content1 = () => {
             <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 relative z-10">
               <div class="w-full lg:w-1/2 relative">
                 <div
-                  class="relative w-full aspect-[4/3] bg-center bg-no-repeat bg-cover border-[3px] border-ink shadow-comic bg-gray-200"
+                  class="relative w-full aspect-[3/3] bg-center bg-no-repeat bg-cover border-[3px] border-ink shadow-comic bg-gray-200"
                   style={{
                     backgroundImage: `url(${mainpic})`,
                   }}
