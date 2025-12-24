@@ -2,7 +2,7 @@ import designStage from "../preparePic/designStage.png";
 import codingStage from "../preparePic/coding.png";
 import hosting from "../preparePic/hosting.png";
 import finished from "../preparePic/finished.png";
-import qua from "../preparePic/qua.jpg";
+import qua2 from "../preparePic/qua2.jpg";
 import nhauNhet from "../preparePic/nhauNhet.jpg";
 import thinking from "../preparePic/thinking.jpg";
 import pickHoa from "../preparePic/pickHoa.jpg";
@@ -79,7 +79,7 @@ export const MyPrepareStory = [
   },
 
   {
-    picture: qua,
+    picture: qua2,
     title: "Quà tặng Nhi",
     decription: "Hoàn thành quà rùi nè hihi, mong là bé sẽ thích nè.",
     date: "23/09/2025",
