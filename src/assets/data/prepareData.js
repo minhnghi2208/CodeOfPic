@@ -6,6 +6,8 @@ import qua2 from "../preparePic/qua2.jpg";
 import nhauNhet from "../preparePic/nhauNhet.jpg";
 import thinking from "../preparePic/thinking.jpg";
 import pickHoa from "../preparePic/pickHoa.jpg";
+import nhanhoa from "../preparePic/nhanhoa.PNG";
+import hoanthanh from "../preparePic/hoanthanh.PNG";
 import codingStage2 from "../preparePic/coding2.jpg";
 import thutay from "../preparePic/thutay.jpg";
 export const MyPrepareStory = [
@@ -28,7 +30,7 @@ export const MyPrepareStory = [
     title: "Rồi bắt tay vô code ",
     decription:
       "Đến bước này là mệt nhất nè. Bắt đầu thực hiện code theo design và chỉnh lại cho phù hợp nè. Ngoài ra còn phải tìm ảnh nè, viết thư nè, bla bla. Nhưng mà tối này đi xem phim về được buff sức mạnh nè.",
-    date: "16/09/2025",
+    date: "16/12/2025",
   },
 
   {
@@ -36,14 +38,14 @@ export const MyPrepareStory = [
     title: "Hôm này mợt, off",
     decription:
       "Tối hôm này đi nhậu nên thôi hôm đó anh off luôn khỏi code hehe.",
-    date: "17/09/2025",
+    date: "17/12/2025",
   },
   {
     picture: pickHoa,
     title: "Hôm nay tìm hoa",
     decription:
       "Hôm này anh search mấy shop trên instaram và hỏi thì lựa được bó như hình nè mong là em sẽ thích hehe.",
-    date: "18/09/2025",
+    date: "18/12/2025",
   },
 
   {
@@ -51,7 +53,7 @@ export const MyPrepareStory = [
     title: "Tiếp tục code",
     decription:
       "Thực ra đoạn này thì anh code cũng được 4 ngày rồi hehe đoạn này hoàn thành được 60% rồi nè. ",
-    date: "19/09/2025",
+    date: "19/12/2025",
   },
 
   {
@@ -59,7 +61,7 @@ export const MyPrepareStory = [
     title: "Chuẩn bị quà, viết thư tay",
     decription:
       "Hôm này anh chuẩn bị quà nè, mà trời ơi khó nhất vẫn là viết thư anh viết theo suy nghĩ nhưng mà cứ sợ sến quá sợ em hông chịu được nên cứ viết đi viết lại quài hehe.",
-    date: "20/09/2025",
+    date: "20/12/2025",
   },
 
   {
@@ -67,21 +69,34 @@ export const MyPrepareStory = [
     title: "Public website của anh lên trình duyệt nè",
     decription:
       "Tới đoạn này thì coi như quá trình coding hoàn thiện được 90% rùi nè. Hôm biết có gì phá sinh không hehe.",
-    date: "21/09/2025",
+    date: "21/12/2025",
   },
 
   {
     picture: finished,
     title: "Hoàn thành website",
     decription:
-      "Sau khi kiểm tra, sửa lỗi thì web đã hoàn thiện gần như là 100% nè, những ngày sau ảnh chỉ cần cập nhật thêm ảnh thui. Mong không có lỗi gì phát sinh :((((",
-    date: "22/09/2025",
+      "Sau khi kiểm tra, sửa lỗi thì web đã hoàn thiện gần như là 99,999999...% nè, những ngày sau ảnh chỉ cần cập nhật thêm ảnh thui. Mong không có lỗi gì phát sinh :((((",
+    date: "22/12/2025",
   },
 
   {
     picture: qua2,
     title: "Quà tặng Nhi",
     decription: "Hoàn thành quà rùi nè hihi, mong là bé sẽ thích nè.",
-    date: "23/09/2025",
+    date: "23/12/2025",
+  },
+  {
+    picture: nhanhoa,
+    title: "Nhận hoa nè",
+    decription: "Trộm vía khi nhận hoa lại rất ưng ý nè.",
+    date: "25/12/2025",
+  },
+  {
+    picture: hoanthanh,
+    title: "Quà tặng Nhi",
+    decription:
+      "Hoàn thành tất cả 100000000%, tối nay em ấy sẽ là của mình, bước vào một mối quan hệ thật sự nè.",
+    date: "25/12/2025",
   },
 ];

@@ -131,30 +131,34 @@ const Prepare = () => {
               ac_unit
             </span>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
-            {MyPrepareStory.map((prepareStory, idx) => (
-              <CardPrepare
-                date={prepareStory.date}
-                picture={prepareStory.picture}
-                title={prepareStory.title}
-                decription={prepareStory.decription}
-                key={idx}
-              ></CardPrepare>
-            ))}
 
-            {/* <article class="group relative flex flex-col justify-center items-center h-full min-h-[300px] bg-gray-100 dark:bg-[#2a2a2a] rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600 hover:border-primary dark:hover:border-primary transition-all cursor-pointer">
-              <div class="size-16 rounded-full bg-white dark:bg-[#333] flex items-center justify-center shadow-sm mb-4 group-hover:scale-110 transition-transform">
-                <span class="material-symbols-outlined text-3xl text-primary">
-                  edit
-                </span>
-              </div>
-              <h3 class="text-lg font-bold text-gray-500 dark:text-gray-400 mb-2">
-                Trang tiếp theo...
-              </h3>
-              <p class="text-sm text-gray-400 dark:text-gray-500 max-w-[200px] text-center">
-                Câu chuyện của ngày hôm nay đang chờ bạn viết nên.
-              </p>
-            </article> */}
+          <div class="relative w-full py-6">
+            <div class="film-scroll flex overflow-x-auto gap-6 md:gap-12 py-10 px-[7.5vw] md:px-[calc(50%-300px)] snap-x snap-mandatory items-center">
+              {MyPrepareStory.map((prepareStory, idx) => (
+                <CardPrepare
+                  date={prepareStory.date}
+                  picture={prepareStory.picture}
+                  title={prepareStory.title}
+                  decription={prepareStory.decription}
+                  key={idx}
+                ></CardPrepare>
+              ))}
+              {/* <article class="carousel-item-animate snap-center shrink-0 w-[200px] md:w-[250px] flex flex-col justify-center items-center bg-black/5 dark:bg-white/5 rounded-xl border-[3px] border-dashed border-gray-300 dark:border-gray-600 hover:border-primary transition-all cursor-pointer">
+                <div class="size-16 rounded-full bg-white dark:bg-[#333] flex items-center justify-center shadow-md mb-4 group-hover:scale-110 transition-transform">
+                  <span class="material-symbols-outlined text-3xl text-primary">
+                    add_a_photo
+                  </span>
+                </div>
+                <h3 class="text-sm font-bold text-gray-500 dark:text-gray-400 font-mono text-center px-4">
+                  THÊM KỶ NIỆM MỚI
+                </h3>
+              </article> */}
+            </div>
+          </div>
+          <div class="flex justify-center mt-6 text-sm text-gray-500 gap-2">
+            <span class="material-symbols-outlined text-lg">arrow_back</span>
+            <span>Lướt để tua phim</span>
+            <span class="material-symbols-outlined text-lg">arrow_forward</span>
           </div>
         </div>
       </div>
