@@ -1,4 +1,4 @@
-import HiChi from "../../assets/pic/HiChi.jpg";
+import HiChi from "../../assets/pic/hichi2.jpg";
 import bun from "../../assets/pic/bun.jpg";
 import pic1 from "../../assets/pic/pic1.jpg";
 const ContentMemories2 = () => {
