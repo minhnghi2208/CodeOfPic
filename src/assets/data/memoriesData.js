@@ -1,10 +1,10 @@
-import HiChi from "../pic/HiChi.jpg";
+import hichi from "../pic/hichi2.jpg";
 import bun from "../pic/bun.jpg";
 import pic1 from "../pic/pic1.jpg";
 import lock from "../pic/lock.jpg";
 export const MyStory = [
   {
-    picture: HiChi,
+    picture: hichi,
     pictureTitle: "Đây là hôm đi HiChi đầu tiên",
     title: "Ngày gặp gỡ",
     message1:

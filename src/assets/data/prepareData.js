@@ -2,13 +2,13 @@ import designStage from "../preparePic/designStage.png";
 import codingStage from "../preparePic/coding.png";
 import hosting from "../preparePic/hosting.png";
 import finished from "../preparePic/finished.png";
-import qua2 from "../preparePic/qua2.jpg";
+import qua2 from "../preparePic/qua.jpg";
 import nhauNhet from "../preparePic/nhauNhet.jpg";
 import thinking from "../preparePic/thinking.jpg";
 import pickHoa from "../preparePic/pickHoa.jpg";
 import nhanhoa from "../preparePic/nhanhoa.PNG";
 import hoanthanh from "../preparePic/hoanthanh.PNG";
-import codingStage2 from "../preparePic/coding2.jpg";
+import codingStage2 from "../preparePic/codingstage3.png";
 import thutay from "../preparePic/thutay.jpg";
 export const MyPrepareStory = [
   {
