@@ -1,19 +1,13 @@
+/* eslint-env node */
+
 export default async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
+  const { name, dob, tob, sex } = req.body;
+
   try {
-    const { name, dob, tob, sex } = req.body;
-
-    if (!name || !dob || !tob || !sex) {
-      return res.status(400).json({ error: "Thiếu thông tin" });
-    }
-    /* eslint-disable */
-    if (!process.env.OPENAI_API_KEY) {
-      return res.status(500).json({ error: "Missing OpenAI API Key" });
-    }
-
     const response = await fetch("https://api.openai.com/v1/responses", {
       method: "POST",
       headers: {
@@ -22,35 +16,57 @@ export default async function handler(req, res) {
       },
       body: JSON.stringify({
         model: "gpt-4.1-mini",
-        input: `
-Bạn là thầy bói tử vi phương Đông.
-Chỉ trả về JSON thuần, KHÔNG markdown, KHÔNG giải thích.
 
-Dữ liệu:
-- Tên: ${name}
-- Ngày sinh: ${dob}
-- Giờ sinh: ${tob}
-- Giới tính: ${sex}
+        // 🔒 BẮT BUỘC MODEL TRẢ JSON
+        response_format: {
+          type: "json_schema",
+          json_schema: {
+            name: "boi_tu_vi",
+            schema: {
+              type: "object",
+              properties: {
+                CongDanh: { type: "string" },
+                TinhDuyen: { type: "string" },
+                SoMayMan: { type: "string" },
+                MauHop: { type: "string" },
+              },
+              required: ["CongDanh", "TinhDuyen", "SoMayMan", "MauHop"],
+            },
+          },
+        },
 
-JSON bắt buộc:
-{
-  "CongDanh": "",
-  "TinhDuyen": "",
-  "SoMayMan": "",
-  "MauHop": ""
-}
-        `,
+        input: [
+          {
+            role: "system",
+            content: "Bạn là thầy bói tử vi.",
+          },
+          {
+            role: "user",
+            content: `Tên: ${name}
+Ngày sinh: ${dob}
+Giờ sinh: ${tob}
+Giới tính: ${sex}`,
+          },
+        ],
       }),
     });
 
     const data = await response.json();
 
-    const text = data.output_text;
-    const result = JSON.parse(text);
+    // ✅ LẤY JSON AN TOÀN
+    const result =
+      data.output_parsed ||
+      data.output?.[0]?.content?.find(
+        (c) => c.type === "output_json"
+      )?.json;
+
+    if (!result) {
+      throw new Error("No JSON returned from OpenAI");
+    }
 
     res.status(200).json(result);
   } catch (err) {
     console.error("Boi tu vi error:", err);
-    res.status(500).json({ error: "Server error" });
+    res.status(500).json({ error: "Không thể xem tử vi lúc này" });
   }
 }
