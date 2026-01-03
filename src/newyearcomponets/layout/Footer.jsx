@@ -1,13 +1,5 @@
-import { useNavigate } from "react-router-dom";
-
 import "./layout.css";
 const Footer = () => {
-  const navigate = useNavigate();
-
-  const goToLink = (link) => {
-    navigate(link);
-  };
-
   return (
     <footer class="w-full bg-[#181111] text-white py-12 px-4 relative overflow-hidden">
       <div class="layout-container max-w-[1200px] mx-auto flex flex-col items-center gap-6 relative z-10">
