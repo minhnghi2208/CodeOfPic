@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-
+import "../component.css";
 const Header = () => {
   const navigate = useNavigate();
   const [openMenu, setOpenMenu] = useState(false);
@@ -35,14 +35,14 @@ const Header = () => {
                   Trang chủ
                 </button>
               </nav>
-              <nav className="flex items-center gap-6 mr-6">
+              {/* <nav className="flex items-center gap-6 mr-6">
                 <button
                   onClick={() => goToLink("/newyear")}
                   className="text-sm font-bold uppercase hover:text-christmas-red hover:underline decoration-2 underline-offset-4 transition-all"
                 >
                   New Year
                 </button>
-              </nav>
+              </nav> */}
               <button
                 onClick={() => goToLink("/memories")}
                 // className="flex items-center justify-center rounded-lg h-10 px-6 bg-christmas-red text-white text-sm font-bold border-2 border-ink shadow-comic hover:shadow-comic-hover hover:translate-y-[2px] hover:translate-x-[2px] transition-all"
@@ -87,12 +87,12 @@ const Header = () => {
               >
                 Trang chủ
               </button>
-              <button
+              {/* <button
                 onClick={() => goToLink("/newyear")}
                 className="block w-full text-left font-bold hover:text-christmas-red"
               >
                 New Year
-              </button>
+              </button> */}
               <button
                 onClick={() => goToLink("/memories")}
                 className="block w-full text-left font-bold hover:text-christmas-red"

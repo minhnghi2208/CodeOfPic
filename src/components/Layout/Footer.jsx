@@ -1,3 +1,4 @@
+import "../component.css";
 const Footer = () => {
   return (
     <div class="w-full bg-christmas-dark-green text-white py-12 border-t-[4px] border-ink relative overflow-hidden">

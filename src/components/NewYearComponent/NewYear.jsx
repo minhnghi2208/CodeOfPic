@@ -1,6 +1,9 @@
+import "../component.css";
 import { useState, useEffect, useRef } from "react";
-import Header from "../Layout/Header";
-import Footer from "../Layout/Footer";
+// import Header from "../Layout/Header";
+import Header from "../../newyearcomponets/layout/Header";
+// import Footer from "../Layout/Footer";
+import Footer from "../../newyearcomponets/layout/Footer";
 import ContentNY1 from "./ContentNY1";
 import Nhi from "../../assets/pic/anh13.jpg";
 const NewYear = () => {
@@ -41,7 +44,7 @@ const NewYear = () => {
   return (
     <>
       <Header></Header>
-      <div class="pt-24 pb-12 w-full flex flex-col items-center bg-dreamy-pattern">
+      <div class="pt-24 pb-12 w-full flex flex-col items-center bg-dreamy-pattern  bg-amber-50">
         <ContentNY1></ContentNY1>
         <div class="w-full max-w-[1280px] px-6 mb-16">
           <div className="pb-4">
@@ -255,7 +258,7 @@ const NewYear = () => {
             </button>
           </div>
         </div> */}
-        <div class="w-full max-w-[1280px] px-6 mb-20">
+        <div class="w-full max-w-[1280px] px-6 mb-20 bg-white">
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 auto-rows-auto">
             <div class="col-span-1 row-span-1 comic-card rounded-xl bg-white dark:bg-[#2a1518] p-5 flex flex-col gap-4 relative overflow-hidden group">
               <div class="absolute -right-6 -top-6 w-24 h-24 bg-yellow-100 rounded-full z-0 group-hover:scale-125 transition-transform duration-500"></div>

@@ -1,0 +1,21 @@
+.tet-pattern {
+  background-color: #fdf7f2;
+  background-image: radial-gradient(#f42547 0.5px, transparent 0.5px),
+    radial-gradient(#f42547 0.5px, #fdf7f2 0.5px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  opacity: 1;
+}
+
+.comic-border {
+  border: 2px solid #181112;
+}
+
+/* Lucky Money Envelope Shape CSS */
+.lucky-envelope-top {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+}
+
+html {
+  scroll-behavior: smooth;
+}

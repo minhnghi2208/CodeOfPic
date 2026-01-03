@@ -1,3 +1,4 @@
+import "../component.css";
 import Header from "../Layout/Header";
 import Footer from "../Layout/Footer";
 import CardPrepare from "./CardPrepare";

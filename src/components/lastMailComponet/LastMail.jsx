@@ -3,6 +3,7 @@ import Header from "../Layout/Header";
 import Footer from "../Layout/Footer";
 import Music from "./Music";
 import Mail from "./Mail";
+import "../component.css";
 const LastMail = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });

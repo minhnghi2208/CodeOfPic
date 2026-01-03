@@ -11,11 +11,17 @@ import LastMail from "./components/lastMailComponet/LastMail";
 import Login from "./components/LoginComponet/Login";
 import Prepare from "./components/RepareComponet/prepare";
 import NewYear from "./components/NewYearComponent/NewYear";
+import Option from "./components/PageOptionComponet/Option";
+import Game from "./newyearcomponets/GameComponent/Game";
+import Boi from "./newyearcomponets/BoiComponent/Boi";
 export default function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Login />} />
+        <Route path="/option" element={<Option />} />
+        <Route path="/game" element={<Game />} />
+        <Route path="/boi" element={<Boi />} />
         <Route path="/home" element={<Home />} />
         <Route path="/newyear" element={<NewYear />} />
         <Route path="/memories" element={<Memories />} />

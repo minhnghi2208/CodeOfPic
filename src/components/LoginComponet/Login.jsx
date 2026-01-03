@@ -3,6 +3,7 @@ import login2 from "../../assets/loginPic/login2.jpg";
 import login3 from "../../assets/loginPic/login3.jpg";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "../component.css";
 const Login = () => {
   const navigate = useNavigate();
 
@@ -12,7 +13,7 @@ const Login = () => {
 
   const handleLogin = () => {
     if (password === "22082004") {
-      goToLink("/home");
+      goToLink("/option");
     } else {
       setShowIncorectPasssword(true);
     }

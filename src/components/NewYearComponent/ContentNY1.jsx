@@ -23,7 +23,7 @@ const ContentNY1 = () => {
             </div>
             <h1 class="text-5xl md:text-7xl font-black text-[#181112] dark:text-white leading-[1.1] tracking-tight drop-shadow-sm">
               Vườn Ước Mơ <br></br>
-              <span class="text-primary italic font-serif">Năm Bính Ngọ</span>
+              <span class="text-primary italic font-serif">Năm Mới Vui Vẻ</span>
             </h1>
             <p class="text-lg md:text-xl text-[#5c4a4d] dark:text-gray-300 max-w-2xl font-medium leading-relaxed">
               Chào mừng Nhi đến với khu vườn thành tựu. Hãy gieo những hạt mầm
@@ -45,7 +45,7 @@ const ContentNY1 = () => {
                 2026
               </span>
               <span class="text-xs font-bold uppercase tracking-widest text-[#181112] dark:text-white">
-                Bính Ngọ
+                {/* Bính Ngọ */}
               </span>
             </div>
           </div>
