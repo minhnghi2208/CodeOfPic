@@ -16,55 +16,51 @@ export default async function handler(req, res) {
       },
       body: JSON.stringify({
         model: "gpt-4.1-mini",
-
-        // 🔒 BẮT BUỘC MODEL TRẢ JSON
-        response_format: {
-          type: "json_schema",
-          json_schema: {
-            name: "boi_tu_vi",
-            schema: {
-              type: "object",
-              properties: {
-                CongDanh: { type: "string" },
-                TinhDuyen: { type: "string" },
-                SoMayMan: { type: "string" },
-                MauHop: { type: "string" },
-              },
-              required: ["CongDanh", "TinhDuyen", "SoMayMan", "MauHop"],
-            },
-          },
-        },
-
         input: [
           {
             role: "system",
-            content: "Bạn là thầy bói tử vi.",
+            content:
+              "Bạn là thầy bói tử vi. CHỈ trả về JSON hợp lệ, KHÔNG markdown, KHÔNG giải thích.",
           },
           {
             role: "user",
             content: `Tên: ${name}
 Ngày sinh: ${dob}
 Giờ sinh: ${tob}
-Giới tính: ${sex}`,
+Giới tính: ${sex}
+
+JSON gồm:
+{
+  "CongDanh": "",
+  "TinhDuyen": "",
+  "SoMayMan": "",
+  "MauHop": ""
+}`,
           },
         ],
+        temperature: 0.7,
       }),
     });
 
     const data = await response.json();
 
-    // ✅ LẤY JSON AN TOÀN
-    const result =
-      data.output_parsed ||
-      data.output?.[0]?.content?.find(
-        (c) => c.type === "output_json"
-      )?.json;
+    // 🔍 DEBUG – CỰC QUAN TRỌNG
+    console.log("OPENAI RAW RESPONSE:", JSON.stringify(data, null, 2));
 
-    if (!result) {
-      throw new Error("No JSON returned from OpenAI");
+    // ✅ LẤY TEXT Ở MỌI TRƯỜNG HỢP
+    let text =
+      data.output_text || data.output?.[0]?.content?.find((c) => c.text)?.text;
+
+    if (!text) {
+      throw new Error("OpenAI returned no text");
     }
 
-    res.status(200).json(result);
+    // 🧼 PHÒNG MODEL TRẢ THÊM CHỮ
+    text = text.trim();
+
+    const json = JSON.parse(text);
+
+    res.status(200).json(json);
   } catch (err) {
     console.error("Boi tu vi error:", err);
     res.status(500).json({ error: "Không thể xem tử vi lúc này" });
