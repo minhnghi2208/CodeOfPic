@@ -64,7 +64,6 @@ const Header = () => {
     //     </div>
     //   </div>
     // </header>
-
     <header className="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b-2 border-[#181112] bg-white px-4 lg:px-10 py-3 shadow-sm">
       <div class="flex items-center gap-3">
         <div class="size-10 bg-primary rounded-full flex items-center justify-center text-secondary border-2 border-[#181112] bg-red-500">
