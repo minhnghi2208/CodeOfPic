@@ -8,59 +8,57 @@ export default async function handler(req, res) {
   const { name, dob, tob, sex } = req.body;
 
   try {
-    const response = await fetch("https://api.openai.com/v1/responses", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        model: "gpt-4.1-mini",
-        input: [
-          {
-            role: "system",
-            content:
-              "Bạn là thầy bói tử vi. CHỈ trả về JSON hợp lệ, KHÔNG markdown, KHÔNG giải thích.",
-          },
-          {
-            role: "user",
-            content: `Tên: ${name}
+    const response = await fetch(
+      "https://openrouter.ai/api/v1/chat/completions",
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
+          "Content-Type": "application/json",
+          "HTTP-Referer": "https://code-of-pic.vercel.app", // domain của bạn
+          "X-Title": "Boi Tu Vi App",
+        },
+        body: JSON.stringify({
+          model: "meta-llama/llama-3.1-8b-instruct:free",
+          messages: [
+            {
+              role: "system",
+              content:
+                "Bạn là thầy bói tử vi. CHỈ trả về JSON hợp lệ. KHÔNG markdown. KHÔNG giải thích.",
+            },
+            {
+              role: "user",
+              content: `
+Tên: ${name}
 Ngày sinh: ${dob}
 Giờ sinh: ${tob}
 Giới tính: ${sex}
 
-JSON gồm:
+JSON bắt buộc:
 {
   "CongDanh": "",
   "TinhDuyen": "",
   "SoMayMan": "",
   "MauHop": ""
-}`,
-          },
-        ],
-        temperature: 0.7,
-      }),
-    });
+}
+            `,
+            },
+          ],
+          temperature: 0.7,
+        }),
+      }
+    );
 
     const data = await response.json();
 
-    // 🔍 DEBUG – CỰC QUAN TRỌNG
-    console.log("OPENAI RAW RESPONSE:", JSON.stringify(data, null, 2));
+    console.log("OPENROUTER RAW:", JSON.stringify(data, null, 2));
 
-    // ✅ LẤY TEXT Ở MỌI TRƯỜNG HỢP
-    let text =
-      data.output_text || data.output?.[0]?.content?.find((c) => c.text)?.text;
+    const text = data.choices?.[0]?.message?.content;
+    if (!text) throw new Error("No text returned");
 
-    if (!text) {
-      throw new Error("OpenAI returned no text");
-    }
+    const result = JSON.parse(text.trim());
 
-    // 🧼 PHÒNG MODEL TRẢ THÊM CHỮ
-    text = text.trim();
-
-    const json = JSON.parse(text);
-
-    res.status(200).json(json);
+    res.status(200).json(result);
   } catch (err) {
     console.error("Boi tu vi error:", err);
     res.status(500).json({ error: "Không thể xem tử vi lúc này" });
