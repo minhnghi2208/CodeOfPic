@@ -1,4 +1,4 @@
-import "./layout.css";
+
 const Footer = () => {
   return (
     <footer class="w-full bg-[#181111] text-white py-12 px-4 relative overflow-hidden">
