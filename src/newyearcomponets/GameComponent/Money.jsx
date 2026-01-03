@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Money.css";
+import "./Money.Css";
 const Money = () => {
   const [open, setOpen] = useState(false);
 
