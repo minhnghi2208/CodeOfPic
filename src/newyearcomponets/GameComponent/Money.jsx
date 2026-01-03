@@ -2,7 +2,14 @@ import { useState } from "react";
 // import "./Money.Css";
 const Money = () => {
   const [open, setOpen] = useState(false);
+  const [money, setMoney] = useState(0);
 
+  const randomMoney = () => {
+    const min = 10; // 10.000
+    const max = 200; // 200.000
+    const value = Math.floor(Math.random() * (max - min + 1)) + min;
+    return value * 1000;
+  };
   return (
     <>
       <div className="bg-white dark:bg-background-dark text-[#181112] font-display overflow-x-hidden min-h-screen flex flex-col relative">
@@ -96,7 +103,10 @@ const Money = () => {
               </p>
             </div>
             <div
-              onClick={() => setOpen(true)}
+              onClick={() => {
+                setMoney(randomMoney());
+                setOpen(true);
+              }}
               className="cursor-pointer group perspective-1000 mt-8 mb-12"
             >
               <div className="relative w-64 h-96 md:w-80 md:h-[480px] bg-red-500 rounded-xl comic-border comic-shadow animate-float-gentle group-hover:scale-105 transition-transform duration-300 flex flex-col items-center justify-center overflow-hidden">
@@ -172,7 +182,8 @@ const Money = () => {
                       Bạn nhận được
                     </span>
                     <span className="text-5xl font-black text-primary tracking-tight">
-                      68.000<span className="text-2xl ml-1 align-top">đ</span>
+                      {money.toLocaleString("vi-VN")}
+                      <span className="text-2xl ml-1 align-top">đ</span>
                     </span>
                   </div>
                   <p className="text-gray-600 font-medium leading-relaxed max-w-[280px]">

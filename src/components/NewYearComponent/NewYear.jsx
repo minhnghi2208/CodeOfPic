@@ -6,6 +6,8 @@ import Header from "../../newyearcomponets/layout/Header";
 import Footer from "../../newyearcomponets/layout/Footer";
 import ContentNY1 from "./ContentNY1";
 import Nhi from "../../assets/pic/anh13.jpg";
+import Nhi2 from "../../assets/nypic/xinh1.jpg";
+import Nhi3 from "../../assets/nypic/xinh2.jpg";
 const NewYear = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -349,7 +351,7 @@ const NewYear = () => {
                   class="w-full h-full bg-cover bg-center"
                   data-alt="Cute comic illustration of a couple holding hands under peach blossoms"
                   style={{
-                    backgroundImage: `url(${Nhi})`,
+                    backgroundImage: `url(${Nhi2})`,
                   }}
                 ></div>
               </div>
@@ -418,7 +420,7 @@ const NewYear = () => {
                   class="w-full h-full bg-cover bg-center"
                   data-alt="Illustration of a happy family eating Tet dinner together"
                   style={{
-                    backgroundImage: `url(${Nhi})`,
+                    backgroundImage: `url(${Nhi3})`,
                   }}
                 ></div>
               </div>

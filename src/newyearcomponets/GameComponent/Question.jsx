@@ -1,5 +1,5 @@
 import "./Game.css";
-import pic1 from "../../assets/pic/pic1.jpg";
+import pic1 from "../../assets/nypic/xinh1.jpg";
 import { useState } from "react";
 import { questions } from "../../assets/data/questionDatat";
 const Question = () => {
@@ -191,6 +191,7 @@ const Question = () => {
                   <button
                     class="bg-black text-white px-8 py-3 rounded-lg font-bold text-lg border-2 border-transparent hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed shadow-md"
                     onClick={nextQuestion}
+                    disabled={selected === null}
                   >
                     {currentIndex === questions.length - 1
                       ? "Hoàn Thành"
