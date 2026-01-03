@@ -21,7 +21,7 @@ export default function App() {
         <Route path="/" element={<Login />} />
         <Route path="/option" element={<Option />} />
         <Route path="/game" element={<Game />} />
-        <Route path="/boi" element={<Boi />} />
+        {/* <Route path="/boi" element={<Boi />} /> */}
         <Route path="/home" element={<Home />} />
         <Route path="/newyear" element={<NewYear />} />
         <Route path="/memories" element={<Memories />} />

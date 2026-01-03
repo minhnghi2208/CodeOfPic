@@ -101,13 +101,13 @@ const Header = () => {
           >
             Trò Chơi
           </a>
-          <a
+          {/* <a
             class="text-[#181112] text-sm font-bold hover:text-primary transition-colors"
             href="#"
             onClick={() => goToLink("/boi")}
           >
             Bói Vui
-          </a>
+          </a> */}
         </nav>
         <div class="flex items-center gap-2">
           <button
