@@ -193,7 +193,7 @@ const BoxGame = () => {
 
   return (
     <>
-      <div class="layout-container flex h-full grow flex-col">
+      <div class="layout-container relative z-10 flex h-full grow flex-col">
         <div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-8">
           <div class="layout-content-container flex flex-col w-full max-w-[1200px] flex-1 gap-8">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 bg-white p-6 rounded-2xl comic-border comic-shadow relative overflow-hidden">

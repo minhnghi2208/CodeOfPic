@@ -13,7 +13,7 @@ const Money = () => {
   return (
     <>
       <div className="bg-white dark:bg-background-dark text-[#181112] font-display overflow-x-hidden min-h-screen flex flex-col relative">
-        <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        {/* <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
           <div
             className="absolute -top-4 -left-10 w-64 h-64 md:w-96 md:h-96 opacity-80"
             data-alt="Watercolor peach blossom branch extending from corner"
@@ -65,6 +65,79 @@ const Money = () => {
                 fill="none"
                 stroke="#8a6067"
                 stroke-width="2"
+              ></path>
+              <circle
+                className="fill-yellow-400"
+                cx="160"
+                cy="40"
+                r="10"
+              ></circle>
+              <circle
+                className="fill-yellow-300"
+                cx="140"
+                cy="60"
+                r="8"
+              ></circle>
+              <circle
+                className="fill-yellow-400"
+                cx="120"
+                cy="90"
+                r="12"
+              ></circle>
+            </svg>
+          </div>
+        </div> */}
+        {/* Background hoa đào và hoa mai - không che content khi scroll */}
+        <div className="pointer-events-none">
+          {/* Góc trên trái - hoa đào */}
+          <div
+            className="fixed top-0 left-0 w-64 h-64 md:w-96 md:h-96 opacity-80 z-0"
+            style={{
+              backgroundImage:
+                "url('https://lh3.googleusercontent.com/aida-public/AB6AXuCziQ6I7weuqFxKXbBlMU39Y7tZvdodJJWlpDFVD_DW0ETNwt3OLvg8xlomFX0ehG0vE-l-jMBV-vjWs9SYN3PR1z5mzo3Acebrr8XQ8hGzZh-WicfkX_85WLa5XbcHojI_cVYKTgUembq99RYxGHg_X_d3eZ3So5IuVpIClpNjjswpVTi6D-IcpkWCtnO9bsDaBuBZLapO8MICeHqJrX5x695faM3ws2ru_UBrPgALPfteFEiqL_OhgiiAuYBygQwttf6nnhFYvRo')",
+              backgroundSize: "80% 100%",
+              backgroundRepeat: "no-repeat",
+            }}
+          >
+            <svg
+              className="w-full h-full fill-pink-300"
+              viewBox="0 0 200 200"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M40,160 Q80,80 160,40"
+                fill="none"
+                stroke="#8a6067"
+                strokeWidth="2"
+              ></path>
+              <circle
+                className="fill-pink-400"
+                cx="160"
+                cy="40"
+                r="10"
+              ></circle>
+              <circle className="fill-pink-300" cx="140" cy="60" r="8"></circle>
+              <circle
+                className="fill-pink-400"
+                cx="100"
+                cy="100"
+                r="12"
+              ></circle>
+            </svg>
+          </div>
+
+          {/* Góc dưới phải - hoa mai */}
+          <div className="fixed bottom-0 right-0 w-64 h-64 md:w-96 md:h-96 opacity-80 z-0 transform rotate-180">
+            <svg
+              className="w-full h-full fill-yellow-300"
+              viewBox="0 0 200 200"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M40,160 Q80,80 160,40"
+                fill="none"
+                stroke="#8a6067"
+                strokeWidth="2"
               ></path>
               <circle
                 className="fill-yellow-400"

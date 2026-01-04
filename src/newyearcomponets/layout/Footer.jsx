@@ -7,7 +7,7 @@ const Footer = () => {
           <span class="material-symbols-outlined">local_florist</span>
           <h3 class="text-lg font-bold font-display">New Year Diary</h3>
         </div>
-        <div class="flex gap-6 text-sm text-gray-400">
+        {/* <div class="flex gap-6 text-sm text-gray-400">
           <a class="hover:text-white transition-colors" href="#">
             Về chúng tôi
           </a>
@@ -17,7 +17,7 @@ const Footer = () => {
           <a class="hover:text-white transition-colors" href="#">
             Riêng tư
           </a>
-        </div>
+        </div> */}
         <div class="text-xs text-gray-600 font-mono mt-4">
           © 2026 New Year Diary. Hope The Best For You, My Honey.
         </div>

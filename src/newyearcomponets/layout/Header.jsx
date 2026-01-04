@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
-
+import { useState } from "react";
 const Header = () => {
   const navigate = useNavigate();
-
+  const [openMenu, setOpenMenu] = useState(false);
   const goToLink = (link) => {
     navigate(link);
   };
@@ -63,65 +63,94 @@ const Header = () => {
     //     </div>
     //   </div>
     // </header>
-    <header className="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b-2 border-[#181112] bg-white px-4 lg:px-10 py-3 shadow-sm">
-      <div class="flex items-center gap-3">
-        <div class="size-10 bg-primary rounded-full flex items-center justify-center text-secondary border-2 border-[#181112] bg-red-500">
-          <span class="material-symbols-outlined text-yellow-300">
-            festival
-          </span>
+    <>
+      <header className="sticky top-0 z-50 bg-white border-b-2 border-[#181112] px-4 lg:px-10 py-3 shadow-sm">
+        <div className="flex items-center justify-between">
+          {/* Logo */}
+          <div className="flex items-center gap-3">
+            <div className="size-10 bg-primary rounded-full flex items-center justify-center text-secondary border-2 border-[#181112] bg-red-500">
+              <span className="material-symbols-outlined text-yellow-300">
+                festival
+              </span>
+            </div>
+            <div>
+              <h2 className="text-[#181112] text-lg lg:text-xl font-extrabold leading-tight uppercase tracking-wide">
+                Tết 2026
+              </h2>
+              <p className="text-xs font-bold text-primary tracking-widest">
+                XUÂN BÍNH NGỌ
+              </p>
+            </div>
+          </div>
+
+          {/* Nav + button */}
+          <div className="flex items-center gap-4 lg:gap-8 relative">
+            <nav className="hidden md:flex items-center gap-6">
+              <a
+                className="text-[#181112] text-sm font-bold hover:text-primary transition-colors"
+                onClick={() => goToLink("/newyear")}
+              >
+                Trang Chủ
+              </a>
+              <a
+                className="text-[#181112] text-sm font-bold hover:text-primary transition-colors"
+                href="#"
+              >
+                Lời Chúc
+              </a>
+              <a
+                className="text-primary text-sm font-black border-b-2 border-primary"
+                onClick={() => goToLink("/game")}
+              >
+                Trò Chơi
+              </a>
+            </nav>
+
+            {/* Mobile menu toggle */}
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => goToLink("/")}
+                className="hidden sm:flex h-10 px-4 bg-primary text-white text-sm font-bold items-center justify-center rounded-lg border-2 border-[#181112] shadow-[2px_2px_0px_0px_#181112] active:translate-y-[2px] active:shadow-none transition-all bg-red-500"
+              >
+                Đăng xuất
+              </button>
+              <button
+                onClick={() => setOpenMenu(!openMenu)}
+                className="sm:hidden text-[#181112]"
+              >
+                <span className="material-symbols-outlined">
+                  {openMenu ? "close" : "menu"}
+                </span>
+              </button>
+            </div>
+          </div>
+
+          {/* Mobile menu sổ xuống */}
+          {openMenu && (
+            <div className="absolute top-full left-0 w-full bg-white border-t-2 border-[#181112] shadow-lg flex flex-col p-4 space-y-3 lg:hidden">
+              <button
+                onClick={() => goToLink("/newyear")}
+                className="block w-full text-left font-bold hover:text-christmas-red"
+              >
+                Trang Chủ
+              </button>
+              <button
+                onClick={() => goToLink("/game")}
+                className="block w-full text-left font-bold hover:text-christmas-red"
+              >
+                Trò Chơi
+              </button>
+              <button
+                onClick={() => goToLink("/")}
+                className="block w-full text-left font-bold text-white bg-red-500 rounded-lg px-4 py-2 border-2 border-[#181112] shadow-[2px_2px_0px_0px_#181112]"
+              >
+                Đăng xuất
+              </button>
+            </div>
+          )}
         </div>
-        <div>
-          <h2 class="text-[#181112] text-lg lg:text-xl font-extrabold leading-tight uppercase tracking-wide">
-            Tết 2026
-          </h2>
-          <p class="text-xs font-bold text-primary tracking-widest">
-            XUÂN BÍNH NGỌ
-          </p>
-        </div>
-      </div>
-      <div class="flex items-center gap-4 lg:gap-8">
-        <nav class="hidden md:flex items-center gap-6">
-          <a
-            class="text-[#181112] text-sm font-bold hover:text-primary transition-colors"
-            href="#"
-            onClick={() => goToLink("/newyear")}
-          >
-            Trang Chủ
-          </a>
-          <a
-            class="text-[#181112] text-sm font-bold hover:text-primary transition-colors"
-            href="#"
-          >
-            Lời Chúc
-          </a>
-          <a
-            class="text-primary text-sm font-black border-b-2 border-primary"
-            href="#"
-            onClick={() => goToLink("/game")}
-          >
-            Trò Chơi
-          </a>
-          {/* <a
-            class="text-[#181112] text-sm font-bold hover:text-primary transition-colors"
-            href="#"
-            onClick={() => goToLink("/boi")}
-          >
-            Bói Vui
-          </a> */}
-        </nav>
-        <div class="flex items-center gap-2">
-          <button
-            onClick={() => goToLink("/")}
-            class="hidden sm:flex h-10 px-4 bg-primary text-white text-sm font-bold items-center justify-center rounded-lg border-2 border-[#181112] shadow-[2px_2px_0px_0px_#181112] active:translate-y-[2px] active:shadow-none transition-all bg-red-500"
-          >
-            Đăng xuất
-          </button>
-          <button class="sm:hidden text-[#181112]">
-            <span class="material-symbols-outlined">menu</span>
-          </button>
-        </div>
-      </div>
-    </header>
+      </header>
+    </>
   );
 };
 

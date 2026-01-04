@@ -80,7 +80,7 @@ const HeroSection = () => {
         </div>
       </section> */}
 
-      <section class="w-full max-w-4xl mx-auto flex flex-col items-center text-center py-16 lg:py-24 relative overflow-hidden lg:overflow-visible">
+      <section class="relative z-10 w-full max-w-4xl mx-auto flex flex-col items-center text-center py-16 lg:py-24  overflow-hidden lg:overflow-visible">
         <div class="relative z-10 px-4">
           <div class="mb-4 inline-flex items-center gap-2 bg-secondary/30 px-4 py-1.5 rounded-full border-2 border-secondary/50">
             <span class="material-symbols-outlined text-primary text-sm">
@@ -119,7 +119,7 @@ const HeroSection = () => {
             <div class="w-52 h-52 bg-red-50 rounded-full border-2 border-dashed border-primary animate-[spin_15s_linear_infinite_reverse]"></div>
           </div>
           <div class="relative z-10 w-40 h-40 md:w-56 md:h-56">
-            <div class="absolute inset-0 bg-secondary rounded-full border-4 border-black translate-x-2 translate-y-2"></div>
+            {/* <div class="absolute inset-0 bg-secondary rounded-full border-4 border-black translate-x-2 translate-y-2"></div> */}
             <div class="absolute inset-0 bg-white rounded-full border-4 border-black overflow-hidden flex items-center justify-center group cursor-pointer hover:scale-105 transition-transform">
               <img
                 alt="Year of the Horse Mascot"
