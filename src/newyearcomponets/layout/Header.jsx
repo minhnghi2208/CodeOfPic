@@ -99,11 +99,17 @@ const Header = () => {
                 Lời Chúc
               </a>
               <a
-                className="text-primary text-sm font-black border-b-2 border-primary"
+                className="text-[#181112] text-sm font-bold hover:text-primary transition-colors"
                 onClick={() => goToLink("/game")}
               >
                 Trò Chơi
               </a>
+              {/* <a
+                className="text-primary text-sm font-black border-b-2 border-primary"
+                onClick={() => goToLink("/game")}
+              >
+                Trò Chơi
+              </a> */}
             </nav>
 
             {/* Mobile menu toggle */}
