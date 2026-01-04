@@ -46,6 +46,7 @@ const BoxGame = () => {
   const [score, setScore] = useState(0);
 
   const handleCardClick = (card) => {
+    if (!isPlaying) return;
     if (lockBoard) return;
     if (card.isFlipped || card.isMatched) return;
 
