@@ -18,7 +18,7 @@ const Footer = () => {
             Riêng tư
           </a>
         </div> */}
-        <div class="text-xs text-gray-600 font-mono mt-4">
+        <div class="text-xs text-gray-600 font-mono mt-4 text-center">
           © 2026 New Year Diary. Hope The Best For You, My Honey.
         </div>
       </div>
