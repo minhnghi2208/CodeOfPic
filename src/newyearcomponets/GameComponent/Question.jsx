@@ -37,7 +37,9 @@ const Question = () => {
         id="game-area"
       >
         <div class="max-w-5xl w-full flex flex-col lg:flex-row gap-8 items-start justify-center">
-          <div class="hidden lg:flex flex-col w-64 shrink-0 gap-6 mt-10 sticky top-24">
+          <div 
+          className="flex flex-col w-full lg:w-64 gap-6 mt-4 lg:mt-10 sticky top-0 lg:top-24 bg-white rounded-xl p-2 lg:p-0 shadow-md lg:shadow-none"
+          >
             <div class="relative group cursor-pointer">
               <div class="absolute -top-6 -right-6 bg-white border-2 border-black rounded-xl p-3 shadow-comic transform rotate-6 z-10">
                 <p class="text-xs font-bold text-black text-center">
