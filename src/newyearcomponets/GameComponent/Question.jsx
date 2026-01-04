@@ -9,7 +9,7 @@ const Question = () => {
   const currentQuestion = questions[currentIndex];
   const progress = ((currentIndex + 1) / questions.length) * 100;
   //   const [gameStarted, setGameStarted] = useState(false);
-
+  const [count, setCount] = useState(0);
   const [showResult, setShowResult] = useState(false);
   const chooseAnswer = (answer) => {
     setSelected(answer);
@@ -41,7 +41,7 @@ const Question = () => {
             <div class="relative group cursor-pointer">
               <div class="absolute -top-6 -right-6 bg-white border-2 border-black rounded-xl p-3 shadow-comic transform rotate-6 z-10">
                 <p class="text-xs font-bold text-black text-center">
-                  Cố lên bạn ơi!
+                  Cố lên em ơi!
                   <br />
                   Sắp nhận lì xì rồi!
                 </p>
@@ -188,6 +188,20 @@ const Question = () => {
                 </div>
 
                 <div class="mt-8 flex justify-end items-center border-t-2 border-dashed border-gray-300 pt-4">
+                  {count > 0 && (
+                    <button
+                      class="bg-black text-white me-4 px-8 py-3 rounded-lg font-bold text-lg border-2 border-transparent hover:bg-gray-800 shadow-md"
+                      onClick={() => {
+                        setCurrentIndex(0);
+                        setCorrectCount(0);
+                        setSelected(null);
+                        setCount(0);
+                        setShowResult(false);
+                      }}
+                    >
+                      Chơi lại
+                    </button>
+                  )}
                   <button
                     class="bg-black text-white px-8 py-3 rounded-lg font-bold text-lg border-2 border-transparent hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed shadow-md"
                     onClick={nextQuestion}
@@ -222,10 +236,14 @@ const Question = () => {
 
               <div className="my-4">
                 <span className="text-6xl font-black text-secondary">
-                  {correctCount}/{questions.length}
+                  {correctCount * 10} Điểm
                 </span>
+                <br></br>
+                {/* <span className="text-6xl font-black text-secondary">
+                  {correctCount}/{questions.length}
+                </span> */}
                 <div className="text-sm font-bold text-white uppercase mt-1">
-                  Câu trả lời đúng
+                  {correctCount}/{questions.length} Câu trả lời đúng
                 </div>
               </div>
 
@@ -245,6 +263,7 @@ const Question = () => {
 
                 <button
                   onClick={() => {
+                    setCount(1);
                     setShowResult(false);
                     // setGameStarted(true);
                   }}

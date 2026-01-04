@@ -15,12 +15,13 @@ const Money = () => {
       <div className="bg-white dark:bg-background-dark text-[#181112] font-display overflow-x-hidden min-h-screen flex flex-col relative">
         <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
           <div
-            className="absolute -top-10 -left-10 w-64 h-64 md:w-96 md:h-96 opacity-80"
+            className="absolute -top-4 -left-10 w-64 h-64 md:w-96 md:h-96 opacity-80"
             data-alt="Watercolor peach blossom branch extending from corner"
             style={{
               backgroundImage:
                 "url('https://lh3.googleusercontent.com/aida-public/AB6AXuCziQ6I7weuqFxKXbBlMU39Y7tZvdodJJWlpDFVD_DW0ETNwt3OLvg8xlomFX0ehG0vE-l-jMBV-vjWs9SYN3PR1z5mzo3Acebrr8XQ8hGzZh-WicfkX_85WLa5XbcHojI_cVYKTgUembq99RYxGHg_X_d3eZ3So5IuVpIClpNjjswpVTi6D-IcpkWCtnO9bsDaBuBZLapO8MICeHqJrX5x695faM3ws2ru_UBrPgALPfteFEiqL_OhgiiAuYBygQwttf6nnhFYvRo')",
-              backgroundSize: "contain",
+              backgroundSize: "80% 100%",
+
               backgroundRepeat: "no-repeat",
             }}
           >
@@ -51,7 +52,7 @@ const Money = () => {
             </svg>
           </div>
           <div
-            className="absolute -bottom-10 -right-10 w-64 h-64 md:w-96 md:h-96 opacity-80 transform rotate-180"
+            className="absolute -bottom-10 -right-1/10 w-64 h-64 md:w-96 md:h-96 opacity-80 transform rotate-180"
             data-alt="Watercolor yellow apricot blossom branch"
           >
             <svg
