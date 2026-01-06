@@ -5,7 +5,11 @@ import Question from "./Question";
 import HeroSection from "./HeroSection";
 import BoxGame from "./BoxGame";
 import Money from "./Money";
+import { useEffect } from "react";
 const Game = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <>
       <Header></Header>
