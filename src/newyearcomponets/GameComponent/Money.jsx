@@ -5,8 +5,8 @@ const Money = () => {
   const [money, setMoney] = useState(0);
 
   const randomMoney = () => {
-    const min = 10; // 10.000
-    const max = 200; // 200.000
+    const min = 50;
+    const max = 200;
     const value = Math.floor(Math.random() * (max - min + 1)) + min;
     return value * 1000;
   };
