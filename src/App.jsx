@@ -13,6 +13,7 @@ import Prepare from "./components/RepareComponet/prepare";
 import NewYear from "./components/NewYearComponent/NewYear";
 import Option from "./components/PageOptionComponet/Option";
 import Game from "./newyearcomponets/GameComponent/Game";
+import Valentine from "./valentinecomponents/Valentine";
 import Boi from "./newyearcomponets/BoiComponent/Boi";
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
         <Route path="/option" element={<Option />} />
         <Route path="/game" element={<Game />} />
         {/* <Route path="/boi" element={<Boi />} /> */}
+        <Route path="/valentine" element={<Valentine />} />
         <Route path="/home" element={<Home />} />
         <Route path="/newyear" element={<NewYear />} />
         <Route path="/memories" element={<Memories />} />

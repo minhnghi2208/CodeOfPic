@@ -58,6 +58,13 @@ const Header = () => {
                 Chuẩn bị
               </button>
               <button
+                onClick={() => goToLink("/option")}
+                // className="flex items-center justify-center rounded-lg h-10 px-6 bg-christmas-red text-white text-sm font-bold border-2 border-ink shadow-comic hover:shadow-comic-hover hover:translate-y-[2px] hover:translate-x-[2px] transition-all"
+                className="text-sm font-bold uppercase hover:text-christmas-red hover:underline decoration-2 underline-offset-4 transition-all"
+              >
+                Trở lại
+              </button>
+              <button
                 onClick={() => goToLink("/")}
                 className="flex items-center justify-center rounded-lg h-10 px-6 bg-christmas-red text-white text-sm font-bold border-2 border-ink shadow-comic hover:shadow-comic-hover hover:translate-y-[2px] hover:translate-x-[2px] transition-all"
               >
@@ -105,6 +112,13 @@ const Header = () => {
                 className="block w-full text-left font-bold hover:text-christmas-red"
               >
                 Chuẩn bị
+              </button>
+              <button
+                onClick={() => goToLink("/option")}
+                // className="flex items-center justify-center rounded-lg h-10 px-6 bg-christmas-red text-white text-sm font-bold border-2 border-ink shadow-comic hover:shadow-comic-hover hover:translate-y-[2px] hover:translate-x-[2px] transition-all"
+                className="block w-full text-left font-bold hover:text-christmas-red"
+              >
+                Trở lại
               </button>
               {/* <button
                 onClick={() => goToLink("/login")}

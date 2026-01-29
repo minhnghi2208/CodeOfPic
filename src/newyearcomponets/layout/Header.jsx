@@ -104,6 +104,12 @@ const Header = () => {
               >
                 Trò Chơi
               </a>
+              <a
+                className="text-[#181112] text-sm font-bold hover:text-primary transition-colors"
+                onClick={() => goToLink("/option")}
+              >
+                Trở lại
+              </a>
               {/* <a
                 className="text-primary text-sm font-black border-b-2 border-primary"
                 onClick={() => goToLink("/game")}
@@ -145,6 +151,12 @@ const Header = () => {
                 className="block w-full text-left font-bold hover:text-christmas-red"
               >
                 Trò Chơi
+              </button>
+              <button
+                onClick={() => goToLink("/option")}
+                className="block w-full text-left font-bold hover:text-christmas-red"
+              >
+                Trở lại
               </button>
               <button
                 onClick={() => goToLink("/")}
