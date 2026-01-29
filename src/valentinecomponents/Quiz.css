@@ -1,0 +1,92 @@
+:root {
+  --bg-cream: #fff9f5;
+  --pink-mist: #ffe4e9;
+  --cherry-red: #8b0000;
+  --soft-shadow: rgba(139, 0, 0, 0.08);
+  --paper-texture: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+}
+body {
+  background-color: var(--bg-cream);
+  font-family: "Montserrat", sans-serif;
+  color: var(--cherry-red);
+  overflow-x: hidden;
+}
+.bg-layer {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: var(--paper-texture);
+  opacity: 0.3;
+}
+.cloud-bg {
+  position: fixed;
+  width: 600px;
+  height: 400px;
+  background: radial-gradient(circle, var(--pink-mist) 0%, transparent 70%);
+  filter: blur(60px);
+  border-radius: 50%;
+  z-index: -2;
+}
+.hand-drawn-border {
+  border: 2px solid var(--cherry-red);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+.question-bubble {
+  position: relative;
+  background: white;
+  border: 3px solid var(--cherry-red);
+  border-radius: 40px 100px 30px 90px / 90px 30px 100px 40px;
+  box-shadow: 15px 15px 30px var(--soft-shadow);
+}
+.quiz-btn {
+  display: flex;
+  align-items: center;
+  padding: 20px; /* p-5 */
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 500;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+
+  border: 1.5px solid rgba(139, 0, 0, 0.3);
+  border-radius: 12px 25px 15px 20px / 20px 15px 25px 12px;
+  background: white;
+  box-shadow: 4px 6px 12px var(--soft-shadow);
+}
+
+.quiz-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--paper-texture);
+  opacity: 0.1;
+  pointer-events: none;
+}
+.quiz-btn:hover {
+  border-color: var(--cherry-red);
+  transform: translateY(-2px);
+  box-shadow: 6px 10px 20px var(--soft-shadow);
+}
+.quiz-btn.selected {
+  border: 2px solid var(--cherry-red);
+  background-color: #fffafb;
+}
+.handwritten {
+  font-family: "Dancing Script", cursive;
+}
+.script-title {
+  font-family: "Pattaya", sans-serif;
+}
+.sparkle {
+  position: absolute;
+  pointer-events: none;
+  color: #ffd700;
+  opacity: 0.6;
+}
+.line-art-flower {
+  opacity: 0.8;
+  color: var(--cherry-red);
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 200;
+}

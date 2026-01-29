@@ -1,16 +1,14 @@
 import "./Valentine.css";
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect } from "react";
 import ptb1 from "../assets/valentinepic/ptb1.JPG";
 import ptb2 from "../assets/valentinepic/ptb2.JPG";
 import ptb3 from "../assets/valentinepic/ptb3.JPG";
 import ptb4 from "../assets/valentinepic/ptb4.JPG";
+import HeaderVLT from "./HeaderVLT";
 const Valentine = () => {
-  const navigate = useNavigate();
-  const [openMenu, setOpenMenu] = useState(false);
-  const goToLink = (link) => {
-    navigate(link);
-  };
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <>
       <body class="bg-pink-pastel font-display overflow-x-hidden min-h-screen relative text-comic-black">
@@ -30,83 +28,7 @@ const Valentine = () => {
           </span>
         </div>
         <div class="relative z-10 flex flex-col min-h-screen">
-          <header className="px-6 py-4 flex justify-center">
-            <div className="w-full max-w-[960px] flex items-center justify-between comic-stroke bg-white px-6 py-2 comic-shadow relative">
-              {/* Logo */}
-              <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-cherry text-3xl">
-                  auto_stories
-                </span>
-                <h1 className="font-black text-2xl uppercase tracking-tighter italic">
-                  Valentine Webtoon
-                </h1>
-              </div>
-
-              {/* Menu desktop */}
-              <div className="hidden md:flex gap-8 font-bold uppercase text-sm">
-                <button
-                  className="hover:text-cherry transition-colors"
-                  onClick={() => goToLink("/valentine")}
-                >
-                  Trang chủ
-                </button>
-                <button
-                  className="hover:text-cherry transition-colors"
-                  onClick={() => goToLink("/option")}
-                >
-                  Trở lại
-                </button>
-                <button
-                  className="hover:text-cherry transition-colors"
-                  onClick={() => goToLink("/")}
-                >
-                  Đăng xuất
-                </button>
-              </div>
-
-              {/* Hamburger mobile */}
-              <button
-                className="md:hidden material-symbols-outlined text-3xl text-cherry"
-                onClick={() => setOpenMenu(!openMenu)}
-              >
-                menu
-              </button>
-
-              {/* Dropdown mobile */}
-              {openMenu && (
-                <div className="absolute top-full left-0 w-full bg-white comic-stroke comic-shadow mt-2 flex flex-col font-bold uppercase text-sm z-50 md:hidden">
-                  <button
-                    className="px-6 py-3 hover:bg-pink-100"
-                    onClick={() => {
-                      goToLink("/valentine");
-                      setOpenMenu(false);
-                    }}
-                  >
-                    Trang chủ
-                  </button>
-                  <button
-                    className="px-6 py-3 hover:bg-pink-100"
-                    onClick={() => {
-                      goToLink("/option");
-                      setOpenMenu(false);
-                    }}
-                  >
-                    Trở lại
-                  </button>
-                  <button
-                    className="px-6 py-3 hover:bg-pink-100"
-                    onClick={() => {
-                      goToLink("/");
-                      setOpenMenu(false);
-                    }}
-                  >
-                    Đăng xuất
-                  </button>
-                </div>
-              )}
-            </div>
-          </header>
-
+          <HeaderVLT></HeaderVLT>
           <main class="flex-1 flex flex-col items-center py-8">
             <div class="w-full max-w-[960px] px-4 relative mb-16">
               {/* <div class="absolute -top-10 -left-4 z-20 transform -rotate-12 speech-bubble font-handwriting font-bold text-cherry scale-110">
