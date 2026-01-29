@@ -14,31 +14,43 @@ const QuizGame = () => {
   const [answers, setAnswers] = useState([]);
 
   const handleSelect = (index) => {
-    if (selected !== null) return;
-
     setSelected(index);
+  };
 
-    const isCorrect = index === currentQuiz.correctIndex;
+  const handleNext = () => {
+    if (selected === null) return;
 
-    if (isCorrect) {
-      setScore((prev) => prev + 1);
-    }
+    const isCorrect = selected === currentQuiz.correctIndex;
 
     setAnswers((prev) => {
       const newAnswers = [...prev];
       newAnswers[currentIndex] = isCorrect;
       return newAnswers;
     });
-  };
 
-  const handleNext = () => {
-    if (selected === null) return;
+    if (isCorrect) {
+      setScore((s) => s + 1);
+    }
 
     setSelected(null);
-    setCurrentIndex(currentIndex + 1);
+    setCurrentIndex((i) => i + 1);
   };
 
   const handleFinish = () => {
+    if (selected === null) return;
+
+    const isCorrect = selected === currentQuiz.correctIndex;
+
+    setAnswers((prev) => {
+      const newAnswers = [...prev];
+      newAnswers[currentIndex] = isCorrect;
+      return newAnswers;
+    });
+
+    if (isCorrect) {
+      setScore((s) => s + 1);
+    }
+
     setShowResult(true);
   };
 
@@ -72,7 +84,7 @@ const QuizGame = () => {
                   filter_vintage
                 </span>
                 <p class="text-sm tracking-[0.3em] font-semibold uppercase opacity-70">
-                  Mảnh Ghép Kỷ Niệm 06/10
+                  {currentIndex}/{dataQuiz.length}
                 </p>
                 <span class="material-symbols-outlined line-art-flower text-3xl">
                   filter_vintage
@@ -208,16 +220,23 @@ const QuizGame = () => {
             </div> */}
             <div className="flex flex-wrap justify-center gap-4 mt-4">
               {dataQuiz.map((_, index) => {
-                let icon = "spa"; // chưa làm
+                let icon = "spa";
                 let style = "text-3xl opacity-30";
 
+                // câu hiện tại → luôn héo khi đã chọn
+                if (index === currentIndex && selected !== null) {
+                  icon = "filter_vintage";
+                  style = "text-4xl opacity-70";
+                }
+
+                // câu đã xác nhận (sau khi Next)
                 if (answers[index] === true) {
-                  icon = "local_florist"; // đúng → hoa nở
+                  icon = "local_florist";
                   style = "text-5xl fill-1 -mb-1";
                 }
 
                 if (answers[index] === false) {
-                  icon = "filter_vintage"; // sai → hoa héo
+                  icon = "filter_vintage";
                   style = "text-4xl opacity-70";
                 }
 
@@ -265,6 +284,7 @@ const QuizGame = () => {
                   setCurrentIndex(0);
                   setSelected(null);
                   setScore(0);
+                  setAnswers([]);
                 }}
               >
                 Chơi lại
