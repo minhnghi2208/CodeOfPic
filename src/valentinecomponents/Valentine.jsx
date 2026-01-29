@@ -151,9 +151,7 @@ const Valentine = () => {
     `,
                   }}
                 ></div>
-                <p class="font-handwriting font-bold text-center mt-2">
-                  First Meet
-                </p>
+                <p class="font-handwriting font-bold text-center mt-2">HIHI</p>
               </div>
               <div class="comic-stroke comic-shadow bg-white p-2 transform rotate-3 translate-y-4 hover:rotate-0 transition-transform cursor-pointer">
                 <div
@@ -165,9 +163,7 @@ const Valentine = () => {
     `,
                   }}
                 ></div>
-                <p class="font-handwriting font-bold text-center mt-2">
-                  Golden Hour
-                </p>
+                <p class="font-handwriting font-bold text-center mt-2">HIHI</p>
               </div>
               <div class="comic-stroke comic-shadow bg-white p-2 transform -rotate-3 -translate-y-2 hover:rotate-0 transition-transform cursor-pointer">
                 <div
@@ -179,9 +175,7 @@ const Valentine = () => {
     `,
                   }}
                 ></div>
-                <p class="font-handwriting font-bold text-center mt-2">
-                  The Movies
-                </p>
+                <p class="font-handwriting font-bold text-center mt-2">HIHI</p>
               </div>
               <div class="comic-stroke comic-shadow bg-white p-2 transform rotate-2 translate-y-6 hover:rotate-0 transition-transform cursor-pointer">
                 <div
@@ -193,9 +187,7 @@ const Valentine = () => {
     `,
                   }}
                 ></div>
-                <p class="font-handwriting font-bold text-center mt-2">
-                  Adventure!
-                </p>
+                <p class="font-handwriting font-bold text-center mt-2">HIHI</p>
               </div>
             </div>
             <div class="w-full max-w-[860px] px-4 mt-12 mb-20 relative">

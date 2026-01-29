@@ -1,6 +1,4 @@
 import "./Option.css";
-import noelbg from "../../assets/pic/noelbg.png";
-import nyoption from "../../assets/nypic/nyoption.png";
 import ChapterCard from "./ChapterCard";
 import { dataOption } from "../../assets/data/optionData";
 import { useNavigate } from "react-router-dom";
@@ -18,7 +16,7 @@ const Option = () => {
               <span class="material-symbols-outlined text-primary text-4xl">
                 local_activity
               </span>
-              Our Beleloved Memories
+              Our Beloved Memories
             </h2>
             <p class="text-gray-600 mt-2 font-medium">
               Chọn chapter để xem kỷ niệm
