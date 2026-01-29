@@ -84,7 +84,7 @@ const QuizGame = () => {
                   filter_vintage
                 </span>
                 <p class="text-sm tracking-[0.3em] font-semibold uppercase opacity-70">
-                  {currentIndex}/{dataQuiz.length}
+                  {currentIndex + 1}/{dataQuiz.length}
                 </p>
                 <span class="material-symbols-outlined line-art-flower text-3xl">
                   filter_vintage
