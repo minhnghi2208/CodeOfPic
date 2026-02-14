@@ -18,13 +18,13 @@ export const dataOption = [
     title: "Valentine Chapter",
     footerBg: "bg-yellow-50",
   },
-  {
-    id: 3,
-    route: "/newyear",
-    bgImage: nyoption,
-    chapter: "CHAPTER 3",
-    title: "Xin chào 2026!",
-    badge: "HOT",
-    footerBg: "bg-orange-50",
-  },
+  // {
+  //   id: 3,
+  //   route: "/newyear",
+  //   bgImage: nyoption,
+  //   chapter: "CHAPTER 3",
+  //   title: "Xin chào 2026!",
+  //   badge: "HOT",
+  //   footerBg: "bg-orange-50",
+  // },
 ];
