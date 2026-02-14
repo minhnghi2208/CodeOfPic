@@ -7,7 +7,7 @@ export const dataQuiz = [
   {
     question: "Lần đầu tiên đi chơi chung zới nhau mụt mình là khi nèo",
     options: ["11/11/2025", "12/11/2025", "15/11/2025", "Đáp án khác"],
-    correctIndex: 3,
+    correctIndex: 2,
   },
   {
     question: "Món nước anh thích nhất",
