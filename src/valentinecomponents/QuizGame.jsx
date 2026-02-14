@@ -6,6 +6,7 @@ const QuizGame = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
+  const percent = Math.round((score / dataQuiz.length) * 100);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selected, setSelected] = useState(null);
   const [score, setScore] = useState(0);
@@ -52,6 +53,22 @@ const QuizGame = () => {
     }
 
     setShowResult(true);
+  };
+
+  const getResultMessage = (percent) => {
+    if (percent === 100) {
+      return "Giỏi đếy cục cưng.";
+    }
+    if (percent >= 80) {
+      return "Cũm bình thường thui";
+    }
+    if (percent >= 60) {
+      return "Dì kì dạ";
+    }
+    if (percent >= 40) {
+      return "Khum ổn zùi đếy";
+    }
+    return "Có lẽ chúng ta nên bắt đầu lại từ đầu 🌱";
   };
 
   return (
@@ -262,12 +279,12 @@ const QuizGame = () => {
               </span>
               <h3 class="script-title text-3xl mb-4">Mức Độ Thấu Hiểu</h3>
               <p class="text-7xl font-light mb-4">
-                {Math.round((score / dataQuiz.length) * 100)}
+                {percent}
                 <span class="text-2xl font-bold">%</span>
               </p>
 
               <p class="handwritten text-3xl mb-8">
-                "Chúng ta sinh ra là dành cho nhau"
+                {getResultMessage(percent)}
               </p>
               <button
                 class="hand-drawn-border px-10 my-5 py-3 font-semibold hover:bg-[var(--cherry-red)] hover:text-white transition-all duration-300"
