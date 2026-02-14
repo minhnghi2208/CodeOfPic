@@ -35,4 +35,25 @@ export const dataQuiz = [
     options: ["1", "2", "3", "4"],
     correctIndex: 1,
   },
+  {
+    question: "Điều trong wishlist muốn cùng cưng làm nhất",
+    options: ["Đi ún cf", "Đi karaoke", "Đi tom sara", "Đáp án khác"],
+    correctIndex: 2,
+  },
+  {
+    question: "Bộ phim tụi mình yêu thích nhất",
+    options: [
+      "Our beloved summer",
+      "Thanh gươm diệt quỷ",
+      "Attack on titan",
+      "Đáp án khác",
+    ],
+    correctIndex: 0,
+  },
+
+  {
+    question: "Giờ em coá nhớ a hum cưng",
+    options: ["Coá", "Rất coá", "Khum", "Đáp án khác"],
+    correctIndex: 1,
+  },
 ];
