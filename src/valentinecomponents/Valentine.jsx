@@ -4,6 +4,7 @@ import ptb1 from "../assets/valentinepic/ptb1.JPG";
 import ptb2 from "../assets/valentinepic/ptb2.JPG";
 import ptb3 from "../assets/valentinepic/ptb3.JPG";
 import ptb4 from "../assets/valentinepic/ptb4.JPG";
+import love from "../assets/valentinepic/love.png";
 import HeaderVLT from "./HeaderVLT";
 const Valentine = () => {
   useEffect(() => {
@@ -121,7 +122,7 @@ const Valentine = () => {
                   <img
                     alt="Comic love art"
                     class="w-full grayscale-[10%]"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuChTnQR7D29OwllBU4ey-3ohAHfTo2DOD69N1QK5q1NyeIqaiB5oUmGGcqQf6vYt4QUk8O4jdQu_7IiklLLQ8-SSePooWEO2TrhPmWsCmp6XKCABBgqPFC-lbIjxU7KQve0CMD2XpdD7Y8OHblOUwnpBNompgnSDI7ZuCSk28aRVdoNecNp9z-nuHCnid-BTTOBNXNriOuOLqZw2sSqnMmut9K2nIlOgWxu93--EbWTF9FQ5JqLFulh2rtlLroPzCgMzp38j1CUZHw"
+                    src={love}
                   />
                 </div>
                 <div class="w-full md:w-2/3 space-y-4">
@@ -129,16 +130,16 @@ const Valentine = () => {
                     To My Dearest...
                   </h3>
                   <p class="text-xl font-handwriting leading-relaxed italic">
-                    "Giống như một chương truyện Webtoon đầy màu sắc, mỗi ngày
-                    bên em đều là một trang vẽ tuyệt đẹp mà anh muốn lưu giữ mãi
-                    mãi. Cảm ơn em đã bước vào cuộc đời anh và làm cho nó trở
-                    nên rực rỡ hơn bất kỳ bộ truyện tranh nào!"
+                    "Hi cục cưng, mùa VALENTINE đầu tiên của chúng mình, hơi bận
+                    rộn tí nhưng anh mong món quà này sẽ giúp em vui vẻ hơn nà.
+                    Mong tụi mình yêu nhau hơn, hiểu nhau hơn và đặc biệt coá
+                    thêm nhiều VALENTINE cùng nhau hơn nữa. Moazzzz"
                   </p>
                   <p class="font-black text-2xl text-cherry">I LOVE YOU! ❤️</p>
                 </div>
               </div>
             </div>
-            <div class="w-full max-w-[960px] px-4 text-center py-10">
+            {/* <div class="w-full max-w-[960px] px-4 text-center py-10">
               <h2 class="text-4xl md:text-5xl font-black uppercase italic tracking-tighter mb-12 leading-tight">
                 Em sẽ cùng anh viết tiếp <br />
                 <span class="text-cherry underline decoration-wavy underline-offset-8">
@@ -160,7 +161,7 @@ const Valentine = () => {
                   Yêu anh nhiều
                 </button>
               </div>
-            </div>
+            </div> */}
           </main>
           <footer class="w-full py-16 comic-stroke bg-white mt-12 border-b-0 border-l-0 border-r-0 relative">
             <div class="halftone absolute inset-0 opacity-5"></div>
