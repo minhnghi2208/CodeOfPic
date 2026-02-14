@@ -30,4 +30,9 @@ export const dataQuiz = [
     options: ["10/10", "100/10", "10000/10", "Khum thể rating vì quá lớn"],
     correctIndex: 3,
   },
+  {
+    question: "Mình đã cùng nhau xem hết bao nhiêu bộ phim",
+    options: ["1", "2", "3", "4"],
+    correctIndex: 1,
+  },
 ];
