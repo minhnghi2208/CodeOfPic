@@ -6,13 +6,13 @@ const QuizGame = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
-  const percent = Math.round((score / dataQuiz.length) * 100);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selected, setSelected] = useState(null);
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
   const currentQuiz = dataQuiz[currentIndex];
   const [answers, setAnswers] = useState([]);
+  const percent = Math.round((score / dataQuiz.length) * 100);
 
   const handleSelect = (index) => {
     setSelected(index);
