@@ -1,6 +1,9 @@
 import Header from "../layout/Header";
 import Footer from "../layout/Footer";
 import { useNavigate } from "react-router-dom";
+import pic1 from "../../assets/nypic/ngang1.jpg";
+import pic2 from "../../assets/nypic/ngang2.jpg";
+import pic3 from "../../assets/nypic/xinh4.JPG";
 const LoiChuc = () => {
   const navigate = useNavigate();
 
@@ -121,7 +124,7 @@ const LoiChuc = () => {
                     alt="Golden apricot blossoms"
                     class="w-full h-full object-cover"
                     data-alt="Close up of bright yellow apricot blossoms against a soft gold background"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9Y1ZmAW0aeeFmTW96L1SRHFkb_SBT5sGely9NyR977842ZHE-DYZiv_hfiiKI70hbGTPldx6JmUKaFfe8QnW-rUonrL2BaD2fhSXoooNy3NE4gk-9VG10X5OQxvGAhyhMoXeYlXn6wRXrI4yFPBHDw1zsgT2PkETn5DnCHGocD-LZjuTd8IyyxCr1lNM60Ey67h8cfmEe72k9-T_zvax7FXDwRGOAg-lY0yzbf7MI7QOkBSC6yT52nuIPHV4poN-grGG4-E4rDGo"
+                    src={pic1}
                   />
                 </div>
                 <h3 class="text-2xl font-bold leading-tight">Vạn Sự Như Ý</h3>
@@ -155,7 +158,7 @@ const LoiChuc = () => {
                     alt="Golden apricot blossoms"
                     class="w-full h-full object-cover"
                     data-alt="Close up of bright yellow apricot blossoms against a soft gold background"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9Y1ZmAW0aeeFmTW96L1SRHFkb_SBT5sGely9NyR977842ZHE-DYZiv_hfiiKI70hbGTPldx6JmUKaFfe8QnW-rUonrL2BaD2fhSXoooNy3NE4gk-9VG10X5OQxvGAhyhMoXeYlXn6wRXrI4yFPBHDw1zsgT2PkETn5DnCHGocD-LZjuTd8IyyxCr1lNM60Ey67h8cfmEe72k9-T_zvax7FXDwRGOAg-lY0yzbf7MI7QOkBSC6yT52nuIPHV4poN-grGG4-E4rDGo"
+                    src={pic2}
                   />
                 </div>
                 <h3 class="text-2xl font-bold leading-tight">
@@ -177,20 +180,21 @@ const LoiChuc = () => {
                 </div>
                 <div class="md:w-1/2 space-y-4 z-10">
                   <h3 class="text-3xl font-black text-white italic">
-                    Lời Chúc Đặc Biệt Cho Cha Mẹ
+                    Lời chúc cho bản thân em
                   </h3>
                   <p class="text-white/90 leading-relaxed">
-                    "Ơn cha dưỡng dục dường non Thái, Nghĩa mẹ sinh thành tựa
-                    biển Đông. Năm mới con chúc Cha Mẹ bách niên giai lão, sống
-                    vui cùng con cháu."
+                    "Năm mới tự tin bước tới, vững vàng trước mọi thử thách.
+                    Chúc bản thân luôn mạnh mẽ, học thêm điều hay, làm được điều
+                    muốn. Mong cho mỗi ngày trôi qua đều là một bước tiến gần
+                    hơn đến ước mơ của mình."
                   </p>
                 </div>
-                <div class="md:w-1/2 comic-border bg-white rounded-lg overflow-hidden h-48 md:h-full">
+                <div class="md:w-2/6 comic-border bg-white rounded-lg overflow-hidden h-48 md:h-full">
                   <img
                     alt="Traditional tea set"
                     class="w-full h-full object-cover"
                     data-alt="A warm traditional tea set on a wooden table with soft sunlight and flower petals"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8j7R6LfcBwn1Y1JldEchCZXtwnMpMUAgnxlhM9QUNgGUY2R4oVMITnmXw6c4WL61tGYNGKB52fEm01oHP0g5mlaFVZlJqSGlr6OnBTol4kbvO6AaLwQ9RoatimwWincjrzzubZcQKDANuqRHmBufBrU7L4a-fEx7B-hFmQJqM_-bmQygE7OfRz45yvrt_z6gn59WN0B9KgwKSLv6Y7crKgzkdigvpubGi09XndbOPeVon6N9tIc0jFH5rgXoblIemhRqHGzf0nk4"
+                    src={pic3}
                   />
                 </div>
               </div>
@@ -204,6 +208,7 @@ const LoiChuc = () => {
                     bolt
                   </span>
                 </div>
+
                 <h3 class="text-2xl font-bold leading-tight">
                   Mã Đáo Thành Công
                 </h3>

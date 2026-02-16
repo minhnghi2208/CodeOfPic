@@ -80,4 +80,11 @@ Lộc về dào dạt sắt son nghĩa tình.
 Gia đình hòa thuận an bình,
 Năm nay viên mãn tròn tình ước mơ.`,
   },
+  {
+    title: "Gieo quẻ gặp sít rịt",
+    content: `Bốc trúng quẻ sít rịt roài,
+Trúng quẻ này thì coi như hữu diên.
+Chúng mình sẽ yêu nhau hơn nữa nà hihi,
+Love u moaz moaz moaz.`,
+  },
 ];
