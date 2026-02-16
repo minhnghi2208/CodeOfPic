@@ -26,9 +26,9 @@ const LoiChuc = () => {
                 CHÀO XUÂN <br /> <span class="text-primary">BÍNH NGỌ</span>
               </h2>
               <p class="text-lg md:text-xl text-gray-700 leading-relaxed max-w-xl">
-                Chào đón năm mới với vó ngựa gỗ thanh tao, lướt qua những rừng
-                hoa đào thắm. Một khởi đầu rực rỡ, kiêu hãnh và đầy nhựa sống
-                đang chờ đón bạn.
+                Năm mới zui zẻ nhen cục cưng, chúc cục cưng coá nhiều sức khoẻ
+                để đi chơi zới anh, có nhiều tiền bao nuôi anh, và cúm cuồi yêu
+                anh nhiều hơn nè hihi.
               </p>
               <div class="flex gap-4">
                 <button
