@@ -1,7 +1,12 @@
 import Header from "../layout/Header";
 import Footer from "../layout/Footer";
-import am from "../../assets/nypic/xinh1.jpg";
+import { useNavigate } from "react-router-dom";
 const LoiChuc = () => {
+  const navigate = useNavigate();
+
+  const goToLink = (link) => {
+    navigate(link);
+  };
   return (
     <>
       <Header></Header>
@@ -23,8 +28,11 @@ const LoiChuc = () => {
                 đang chờ đón bạn.
               </p>
               <div class="flex gap-4">
-                <button class="comic-border bg-primary text-white px-8 py-4 font-bold text-lg hover:-translate-y-1 transition-all">
-                  KHÁM PHÁ NGAY
+                <button
+                  onClick={() => goToLink("/que")}
+                  class="comic-border bg-primary text-white px-8 py-4 font-bold text-lg hover:-translate-y-1 transition-all"
+                >
+                  Gieo Quẻ Ngay
                 </button>
               </div>
             </div>
@@ -45,7 +53,7 @@ const LoiChuc = () => {
           </div>
         </section>
 
-        <section class="max-w-7xl mx-auto px-6 mb-12">
+        {/* <section class="max-w-7xl mx-auto px-6 mb-12">
           <div class="flex flex-wrap gap-4 border-b border-gray-200 pb-2">
             <button class="flex items-center gap-2 px-6 py-3 font-bold text-primary border-b-4 border-primary">
               <span class="material-symbols-outlined">family_restroom</span> GIA
@@ -62,11 +70,11 @@ const LoiChuc = () => {
               BẢN THÂN
             </button>
           </div>
-        </section>
+        </section> */}
 
         <section class="max-w-7xl mx-auto px-6 pb-24">
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="group cursor-pointer">
+            {/* <div class="group cursor-pointer">
               <div
                 class="comic-border bg-white p-6 h-full flex flex-col gap-4 group-hover:-translate-y-2 transition-transform bg-cover bg-center relative"
                 data-alt="Light pattern background with subtle flower outlines"
@@ -105,8 +113,7 @@ const LoiChuc = () => {
                   </div>
                 </div>
               </div>
-            </div>
-
+            </div> */}
             <div class="group cursor-pointer">
               <div class="comic-border-gold bg-[#fffcf0] p-6 h-full flex flex-col gap-4 group-hover:-translate-y-2 transition-transform">
                 <div class="w-full aspect-video overflow-hidden rounded-lg comic-border-gold mb-2">
@@ -119,22 +126,10 @@ const LoiChuc = () => {
                 </div>
                 <h3 class="text-2xl font-bold leading-tight">Vạn Sự Như Ý</h3>
                 <p class="text-gray-600 italic">
-                  "Gói trọn lộc tài, giữ chặt bình an. Năm mới Bính Ngọ, vạn
-                  điều hanh thông."
+                  "Chúc cục cưng coá được, làm được mọi điều mình mong muốn nè."
                 </p>
-                <div class="mt-auto pt-4 flex items-center justify-between">
-                  <span class="text-xs font-bold uppercase tracking-widest text-gold">
-                    Nhấn để mở
-                  </span>
-                  <div class="size-8 rounded-full bg-gold/10 flex items-center justify-center">
-                    <span class="material-symbols-outlined text-sm text-gold">
-                      star
-                    </span>
-                  </div>
-                </div>
               </div>
             </div>
-
             <div class="group cursor-pointer">
               <div class="comic-border bg-white p-6 h-full flex flex-col gap-4 group-hover:-translate-y-2 transition-transform">
                 <div class="flex justify-between items-start">
@@ -149,17 +144,27 @@ const LoiChuc = () => {
                 <p class="text-gray-600 italic">
                   "Sức khỏe dẻo dai như ngựa chiến, tinh thần phấn chấn tựa xuân
                   sang."
+                  <br></br>"Ghê khum ghê khum hehehe"
                 </p>
-                <div class="mt-auto pt-4 flex items-center justify-between">
-                  <span class="text-xs font-bold uppercase tracking-widest text-primary">
-                    Nhấn để mở
-                  </span>
-                  <div class="size-8 rounded-full bg-primary/10 flex items-center justify-center">
-                    <span class="material-symbols-outlined text-sm">
-                      medical_services
-                    </span>
-                  </div>
+              </div>
+            </div>
+            <div class="group cursor-pointer">
+              <div class="comic-border-gold bg-[#fffcf0] p-6 h-full flex flex-col gap-4 group-hover:-translate-y-2 transition-transform">
+                <div class="w-full aspect-video overflow-hidden rounded-lg comic-border-gold mb-2">
+                  <img
+                    alt="Golden apricot blossoms"
+                    class="w-full h-full object-cover"
+                    data-alt="Close up of bright yellow apricot blossoms against a soft gold background"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9Y1ZmAW0aeeFmTW96L1SRHFkb_SBT5sGely9NyR977842ZHE-DYZiv_hfiiKI70hbGTPldx6JmUKaFfe8QnW-rUonrL2BaD2fhSXoooNy3NE4gk-9VG10X5OQxvGAhyhMoXeYlXn6wRXrI4yFPBHDw1zsgT2PkETn5DnCHGocD-LZjuTd8IyyxCr1lNM60Ey67h8cfmEe72k9-T_zvax7FXDwRGOAg-lY0yzbf7MI7QOkBSC6yT52nuIPHV4poN-grGG4-E4rDGo"
+                  />
                 </div>
+                <h3 class="text-2xl font-bold leading-tight">
+                  Tình Duyên Đong Đầy
+                </h3>
+                <p class="text-gray-600 italic">
+                  "Chúc chúng mình luôn hạnh phúc bên nhau đón thêm nhiều mùa
+                  xuân hơn nà. hihihi"
+                </p>
               </div>
             </div>
 
@@ -179,9 +184,6 @@ const LoiChuc = () => {
                     biển Đông. Năm mới con chúc Cha Mẹ bách niên giai lão, sống
                     vui cùng con cháu."
                   </p>
-                  <button class="bg-white text-primary px-6 py-2 rounded-full font-bold text-sm">
-                    GỬI NGAY
-                  </button>
                 </div>
                 <div class="md:w-1/2 comic-border bg-white rounded-lg overflow-hidden h-48 md:h-full">
                   <img
@@ -209,16 +211,6 @@ const LoiChuc = () => {
                   "Ngựa chạy đường xa thêm dũng mãnh. Sự nghiệp vươn cao, rạng
                   rỡ công danh."
                 </p>
-                <div class="mt-auto pt-4 flex items-center justify-between">
-                  <span class="text-xs font-bold uppercase tracking-widest text-primary">
-                    Nhấn để mở
-                  </span>
-                  <div class="size-8 rounded-full bg-primary/10 flex items-center justify-center">
-                    <span class="material-symbols-outlined text-sm">
-                      trending_up
-                    </span>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
