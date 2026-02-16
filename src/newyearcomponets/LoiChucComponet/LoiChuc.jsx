@@ -189,7 +189,7 @@ const LoiChuc = () => {
                     hơn đến ước mơ của mình."
                   </p>
                 </div>
-                <div class="md:w-2/6 comic-border bg-white rounded-lg overflow-hidden h-48 md:h-full">
+                <div class="md:w-2/5 comic-border bg-white rounded-lg overflow-hidden h-48 md:h-full">
                   <img
                     alt="Traditional tea set"
                     class="w-full h-full object-cover"
