@@ -15,7 +15,9 @@ import Option from "./components/PageOptionComponet/Option";
 import Game from "./newyearcomponets/GameComponent/Game";
 import Valentine from "./valentinecomponents/Valentine";
 import QuizGame from "./valentinecomponents/QuizGame";
+import LoiChuc from "./newyearcomponets/LoiChucComponet/LoiChuc";
 import Boi from "./newyearcomponets/BoiComponent/Boi";
+import GieoQue from "./newyearcomponets/GieoQueComponent/GieoQue";
 export default function App() {
   return (
     <Router>
@@ -23,6 +25,8 @@ export default function App() {
         <Route path="/" element={<Login />} />
         <Route path="/option" element={<Option />} />
         <Route path="/game" element={<Game />} />
+        <Route path="/que" element={<GieoQue />} />
+        <Route path="/loichuc" element={<LoiChuc />} />
         {/* <Route path="/boi" element={<Boi />} /> */}
         <Route path="/valentine" element={<Valentine />} />
         <Route path="/Quiz" element={<QuizGame />} />

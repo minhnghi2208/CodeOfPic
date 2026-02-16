@@ -1,0 +1,125 @@
+.font-display {
+  font-family: "Noto Serif", serif;
+}
+.font-sans {
+  font-family: "Noto Sans", sans-serif;
+}
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(6deg);
+  }
+  40% {
+    transform: rotate(-6deg);
+  }
+  60% {
+    transform: rotate(4deg);
+  }
+  80% {
+    transform: rotate(-4deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-shake {
+  animation: shake 0.5s infinite;
+}
+
+/* Comic book style speech bubble tail */
+.speech-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  margin-left: -20px;
+  border-width: 20px 20px 0;
+  border-style: solid;
+  border-color: #ffffff transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+}
+.speech-bubble::before {
+  content: "";
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  margin-left: -22px;
+  border-width: 22px 22px 0;
+  border-style: solid;
+  border-color: #181211 transparent;
+  display: block;
+  width: 0;
+  z-index: 0;
+}
+.clip-envelope-top {
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease-out;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.4s ease-out;
+}
+
+/* Float animation for clouds/elements */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+.animate-float-delayed {
+  animation: float 5s ease-in-out infinite 2s;
+}
+
+/* Subtle shake animation for the tube */
+@keyframes shake {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-2deg);
+  }
+  75% {
+    transform: rotate(2deg);
+  }
+}
+.hover-shake:hover {
+  animation: shake 0.5s ease-in-out infinite;
+}
